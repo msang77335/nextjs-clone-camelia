@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Head from "next/head";
 import Image from "next/image";
 import * as s from "../../styles/emotion/StyleBlog";
 import { motion } from "framer-motion";
@@ -12,6 +13,13 @@ const Blog: React.FC = () => {
          exit={{ opacity: 0 }}
          transition={{ duration: 0.45 }}
       >
+         <Head>
+            <title>Camelia Barnd - Blog</title>
+            <meta
+               name="viewport"
+               content="initial-scale=1.0, width=device-width"
+            />
+         </Head>
          <s.BlogContentMain>
             <s.BlogContainer>
                <s.Name>

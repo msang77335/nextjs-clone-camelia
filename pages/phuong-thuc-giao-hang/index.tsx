@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import * as s from "../../styles/emotion/StyleDelivery";
 import { motion } from "framer-motion";
 
@@ -10,6 +11,13 @@ const Delivery: React.FC = () => {
          exit={{ opacity: 0 }}
          transition={{ duration: 0.45 }}
       >
+         <Head>
+            <title>Camelia Barnd - Phương thức giao hàng</title>
+            <meta
+               name="viewport"
+               content="initial-scale=1.0, width=device-width"
+            />
+         </Head>
          <s.DeliveryContentMain>
             <s.DeliveryContainer>
                <s.Name>PHƯƠNG THỨC GIAO HÀNG</s.Name>

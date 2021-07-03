@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Head from "next/head";
 import * as s from "../../styles/emotion/StyleAddress";
 import { motion } from "framer-motion";
 
@@ -11,6 +12,13 @@ const Address: React.FC = () => {
          exit={{ opacity: 0 }}
          transition={{ duration: 0.45 }}
       >
+         <Head>
+            <title>Camelia Barnd - Address</title>
+            <meta
+               name="viewport"
+               content="initial-scale=1.0, width=device-width"
+            />
+         </Head>
          <s.AddressContentMain>
             <s.AddressContainer>
                <s.Name>CỬA HÀNG</s.Name>

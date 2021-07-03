@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import * as s from "../../styles/emotion/StyleGuarantee";
 import { motion } from "framer-motion";
 
@@ -10,6 +11,13 @@ const Guarantee: React.FC = () => {
          exit={{ opacity: 0 }}
          transition={{ duration: 0.45 }}
       >
+         <Head>
+            <title>Camelia Barnd - Chính sách bảo hành</title>
+            <meta
+               name="viewport"
+               content="initial-scale=1.0, width=device-width"
+            />
+         </Head>
          <s.GuaranteeContentMain>
             <s.GuaranteeContainer>
                <s.Name as="h2">CHÍNH SÁCH BẢO HÀNH</s.Name>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Head from "next/head";
 import * as s from "../../styles/emotion/StylePayment";
 import { motion } from "framer-motion";
 
@@ -11,6 +12,13 @@ const Payment: React.FC = () => {
          exit={{ opacity: 0 }}
          transition={{ duration: 0.45 }}
       >
+         <Head>
+            <title>Camelia Barnd - Phương thức thanh toán</title>
+            <meta
+               name="viewport"
+               content="initial-scale=1.0, width=device-width"
+            />
+         </Head>
          <s.PaymentContentMain>
             <s.PaymentContainer>
                <s.Name>PHƯƠNG THỨC THANH TOÁN</s.Name>
