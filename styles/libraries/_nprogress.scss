@@ -1,0 +1,13 @@
+// NProgress style.
+@import "nprogress/nprogress.css";
+
+#nprogress .bar {
+   background-color: #d61c1f !important;
+}
+#nprogress .peg {
+   box-shadow: 0 0 10px #d61c1f, 0 0 5px #d61c1f !important;
+}
+#nprogress .spinner-icon {
+   border-top-color: #d61c1f;
+   border-left-color: #d61c1f;
+}
