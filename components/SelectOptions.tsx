@@ -16,8 +16,10 @@ interface Props {
 
 const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
    const [isOpen, setIsOpen] = useState<boolean>(false);
-   const [isSelected, setIsSelected] = useState<Option>({ key: -1, value: "" });
-   const [nowOptions, setNowOptions] = useState<Option[]>(options);
+   const [isSelected, setIsSelected] = useState<Option>(
+      options[0] || { key: -1, value: "" }
+   );
+   //const [nowOptions, setNowOptions] = useState<Option[]>(options);
    const handleOnClick = () => {
       setIsOpen(!isOpen);
    };
@@ -26,15 +28,12 @@ const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
       setIsSelected(option);
       setIsOpen(false);
    };
-   useEffect(() => {
-      setIsSelected(options[0]);
-   }, []);
-   useEffect(() => {
-      const newOptions: Option[] = options.filter(
-         (option) => option.key != isSelected.key
-      );
-      setNowOptions(newOptions);
-   }, [isSelected]);
+   // useEffect(() => {
+   //    const newOptions: Option[] = options.filter(
+   //       (option) => option.key != isSelected.key
+   //    );
+   //    setNowOptions(newOptions);
+   // }, [isSelected]);
    return (
       <OutsideClickHandler
          onOutsideClick={() => {
@@ -49,14 +48,18 @@ const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
                   <FontAwesomeIcon icon={faCaretDown} />
                </s.Selected>
                <s.List>
-                  {nowOptions.map((option) => (
-                     <s.Item
-                        key={option.value}
-                        onClick={() => handleSelect(option)}
-                     >
-                        {option.value}
-                     </s.Item>
-                  ))}
+                  {options.map(
+                     (option) =>
+                        JSON.stringify(option) !=
+                           JSON.stringify(isSelected) && (
+                           <s.Item
+                              key={option.value}
+                              onClick={() => handleSelect(option)}
+                           >
+                              {option.value}
+                           </s.Item>
+                        )
+                  )}
                </s.List>
             </s.Box>
          </s.Select>

@@ -16,28 +16,28 @@ const categoryApi = {
    getAll: async () => {
       return await CategorySchema.find({});
    },
-   // getProducts: async () => {
-   //    return new Promise(async (resolve, reject) => {
-   //       const products: Product[] = await ProductSchema.find({});
-   //       const productsSumary = [] as ProductSumary[];
-   //       await Promise.all(
-   //          products.map(async (product) => {
-   //             return productApi
-   //                .getSummary(product.slug)
-   //                .then((productSumary) => {
-   //                   productsSumary.push(productSumary);
-   //                });
-   //          })
-   //       )
-   //          .then(() => {
-   //             resolve({
-   //                category: { name: "tất cả sản phẩm", value: "all" },
-   //                products: productsSumary,
-   //             });
-   //          })
-   //          .catch(() => reject({}));
-   //    });
-   // },
+   getProducts: async () => {
+      return new Promise(async (resolve, reject) => {
+         const products: Product[] = await ProductSchema.find({});
+         const productsSumary = [] as ProductSumary[];
+         await Promise.all(
+            products.map(async (product) => {
+               return productApi
+                  .getSummary(product.slug)
+                  .then((productSumary) => {
+                     productsSumary.push(productSumary);
+                  });
+            })
+         )
+            .then(() => {
+               resolve({
+                  category: { name: "tất cả sản phẩm", value: "all" },
+                  products: productsSumary,
+               });
+            })
+            .catch(() => reject({}));
+      });
+   },
    getProductsByCategory: async (slug: string) => {
       return new Promise(async (resolve, reject) => {
          const category: Category = await CategorySchema.findOne({
