@@ -32,8 +32,8 @@ const CartModal: React.FC<PropsModal> = ({ status, closeCart }) => {
                <CartModalItem />
                <CartModalItem />
                <CartModalItem />
-            </s.Center> */}
-            {/* <s.Bottom>
+            </s.Center>
+            <s.Bottom>
                <s.Total>
                   <s.Price>
                      Tổng: <s.PriceValue>450,000</s.PriceValue>

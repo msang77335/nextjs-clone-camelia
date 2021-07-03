@@ -9,9 +9,11 @@ function SampleNextArrow(props) {
    const { onClick } = props;
    return (
       <s.NextArrow onClick={onClick}>
-         <img
-            src="//theme.hstatic.net/1000365849/1000614631/14/rowright.png?v=81"
-            alt=""
+         <Image
+            src="http://theme.hstatic.net/1000365849/1000614631/14/rowright.png?v=81"
+            width={18}
+            height={42}
+            alt="Next Slide"
          />
       </s.NextArrow>
    );
@@ -21,9 +23,11 @@ function SamplePrevArrow(props) {
    const { onClick } = props;
    return (
       <s.PrevArrow onClick={onClick}>
-         <img
-            src="//theme.hstatic.net/1000365849/1000614631/14/rowleft.png?v=81"
-            alt=""
+         <Image
+            src="http://theme.hstatic.net/1000365849/1000614631/14/rowleft.png?v=81"
+            width={18}
+            height={42}
+            alt="Prev Slide"
          />
       </s.PrevArrow>
    );

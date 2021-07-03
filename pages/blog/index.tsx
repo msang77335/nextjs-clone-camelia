@@ -25,8 +25,8 @@ const Blog: React.FC = () => {
                <s.Block>
                   <s.Des>
                      Chẳng cần cầu kì, màu sắc, những items với phong cách tối
-                     giản vẫn khiến giới trẻ "phát cuồng" vì sự thoải mái, trẻ
-                     trung mà nó mang lại.
+                     giản vẫn khiến giới trẻ &quot;phát cuồng&quot; vì sự thoải
+                     mái, trẻ trung mà nó mang lại.
                   </s.Des>
                   <Image
                      quality={100}
@@ -48,11 +48,12 @@ const Blog: React.FC = () => {
                      đơn giản, tinh tế lại không kém phần thời thượng. Giờ đây,
                      thay vì diện những bộ cánh kiểu cách, với nhiều hình thù,
                      hoạ tiết, người trẻ thường chọn những item đơn sắc, gọn
-                     gàng và mix thật đơn giản để tạo nên những set đồ "chất
-                     ngất", phù hợp với mọi bối cảnh. Các nhãn hàng, thương hiệu
-                     thời trang từ đó cũng cho ra đời rất nhiều sản phẩm theo
-                     phong cách đơn giản, tiện lợi nhất, hướng tới vẻ đẹp tinh
-                     tế, thanh lịch và những giá trị ý nghĩa cho giới trẻ.
+                     gàng và mix thật đơn giản để tạo nên những set đồ
+                     &quot;chất ngất&quot;, phù hợp với mọi bối cảnh. Các nhãn
+                     hàng, thương hiệu thời trang từ đó cũng cho ra đời rất
+                     nhiều sản phẩm theo phong cách đơn giản, tiện lợi nhất,
+                     hướng tới vẻ đẹp tinh tế, thanh lịch và những giá trị ý
+                     nghĩa cho giới trẻ.
                   </s.Des>
                   <s.Des>
                      Hiện nay, một trong những thương hiệu hàng đầu trong phong
@@ -101,7 +102,7 @@ const Blog: React.FC = () => {
                </s.Block>
                <s.Block>
                   <s.Title>
-                     Đựng đồ "thả ga" với thiết kế bên trong tối ưu
+                     Đựng đồ &quot;thả ga&quot; với thiết kế bên trong tối ưu
                   </s.Title>
                   <s.Des>
                      Ngoài tiêu chí đơn giản, gọn gàng thì sản phẩm của Camelia
@@ -125,12 +126,12 @@ const Blog: React.FC = () => {
                   </s.Des>
                   <s.Des>
                      Ngoài những ngăn đựng đồ rộng để bạn có thể thoải mái đem
-                     theo "cả thế giới" thì balo, túi xách của Camelia còn có
-                     những túi nhỏ bên trong được thiết kế nhiều kích thước khác
-                     nhau. Với những ngăn nhỏ này, bạn có thể để những đồ dùng
-                     dễ rơi như chìa khóa, đồ dùng cá nhân. Mọi chi tiết bên
-                     trong túi xách, ví hay balo dù là nhỏ nhất đều được tận
-                     dụng để tạo nên những công năng khác nhau.
+                     theo &quot;cả thế giới&quot; thì balo, túi xách của Camelia
+                     còn có những túi nhỏ bên trong được thiết kế nhiều kích
+                     thước khác nhau. Với những ngăn nhỏ này, bạn có thể để
+                     những đồ dùng dễ rơi như chìa khóa, đồ dùng cá nhân. Mọi
+                     chi tiết bên trong túi xách, ví hay balo dù là nhỏ nhất đều
+                     được tận dụng để tạo nên những công năng khác nhau.
                   </s.Des>
                </s.Block>
                <s.Block>
@@ -162,16 +163,17 @@ const Blog: React.FC = () => {
                      được gia công tỉ mỉ và đặc biệt, khóa kéo cũng được chọn từ
                      nhóm các loại tốt nhất. Vậy nên, dù Camelia hướng tới đơn
                      giản trong kiểu dáng, mẫu mã nhưng những chất lượng sản
-                     phẩm thì không hề "đơn giản" chút nào.
+                     phẩm thì không hề &quot;đơn giản&quot; chút nào.
                   </s.Des>
                   <s.Des>
                      Không chỉ bắt kịp theo xu hướng và tạo ra những sản phẩm
-                     "được lòng" giới trẻ, Camelia còn muốn thông qua sản phẩm
-                     của mình để truyền tải thông điệp về lối sống tối giản đến
-                     với mỗi người. Khi lựa chọn phong cách tối giản, bạn sẽ
-                     không cần quá nhiều đồ đạc, phụ kiện. Tủ đồ chỉ cần những
-                     items tối giản sẽ khiến cuộc sống của bạn trở nên đơn giản
-                     hơn, tiện lợi hơn và tiết kiệm được nhiều thời gian hơn.
+                     &quot;được lòng&quot; giới trẻ, Camelia còn muốn thông qua
+                     sản phẩm của mình để truyền tải thông điệp về lối sống tối
+                     giản đến với mỗi người. Khi lựa chọn phong cách tối giản,
+                     bạn sẽ không cần quá nhiều đồ đạc, phụ kiện. Tủ đồ chỉ cần
+                     những items tối giản sẽ khiến cuộc sống của bạn trở nên đơn
+                     giản hơn, tiện lợi hơn và tiết kiệm được nhiều thời gian
+                     hơn.
                   </s.Des>
                   <s.Des>
                      Nếu vẫn đang băn khoăn không biết bắt đầu phong cách tối

@@ -17,8 +17,8 @@ const About: React.FC = () => {
                <s.Top>
                   <s.Title>Welcome to Camelia</s.Title>
                   <s.Des>
-                     "Camelia puts its heart and soul into every product, giving
-                     people minimalism from the smallest things."
+                     &quot;Camelia puts its heart and soul into every product,
+                     giving people minimalism from the smallest things.&quot;
                   </s.Des>
                </s.Top>
                <s.Center>
@@ -29,16 +29,16 @@ const About: React.FC = () => {
                      khóa, tai nghe, điện thoại bị thất lạc trong chính chiếc
                      balo, túi xách mà chúng ta bỏ vào một cách lộn xộn. Nhưng
                      rồi chúng ta dần cho đó là thói quen và sống chung với
-                     những vấn đề "nhỏ nhặt" này...
+                     những vấn đề &quot;nhỏ nhặt&quot; này...
                   </s.Des>
                   <s.Des>
-                     &emsp;&emsp;&nbsp;Với thông điệp "More than Simplicity",
-                     Camelia dành trọn tâm huyết để làm ra các sản phẩm của
-                     mình. Không chỉ là sự đơn giản ở thiết kế bên ngoài giúp
-                     cho người dùng đỡ mất thời gian suy nghĩ đến việc lựa chọn
-                     quần áo phù hợp, mà thiết kế bên trong của mỗi sản phẩm đều
-                     được chăm chút, tinh gọn nhằm tạo ra sự tiện lợi và ngăn
-                     nắp cho người sử dụng.
+                     &emsp;&emsp;&nbsp;Với thông điệp &quot;More than
+                     Simplicity&quot;, Camelia dành trọn tâm huyết để làm ra các
+                     sản phẩm của mình. Không chỉ là sự đơn giản ở thiết kế bên
+                     ngoài giúp cho người dùng đỡ mất thời gian suy nghĩ đến
+                     việc lựa chọn quần áo phù hợp, mà thiết kế bên trong của
+                     mỗi sản phẩm đều được chăm chút, tinh gọn nhằm tạo ra sự
+                     tiện lợi và ngăn nắp cho người sử dụng.
                   </s.Des>
                   <s.Des>
                      &emsp;&emsp;&nbsp;Hãy trải nghiệm và cảm nhận sự thay đổi

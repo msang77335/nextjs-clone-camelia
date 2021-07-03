@@ -24,9 +24,13 @@ export const Submit = styled.button`
    background-color: rgb(84, 84, 87);
    color: #ffff;
    border-radius: 3px;
-   padding: 1rem;
-   img {
-      width: 2rem;
-      height: 2rem;
+   width: 4rem;
+   height: 4rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.25s linear;
+   &:hover {
+      background-color: #767679;
    }
 `;

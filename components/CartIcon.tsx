@@ -1,15 +1,16 @@
 import React from "react";
+import Image from "next/image";
 import cartIcon from "../assets/images/shopping-cart.svg";
 import * as s from "../styles/emotion/StyleHeader";
 
-interface Props {
+interface PropsCart {
    openCart?: Function;
 }
 
-const CartIcon: React.FC<Props> = ({ openCart }) => {
+const CartIcon: React.FC<PropsCart> = ({ openCart }) => {
    return (
       <s.Cart onClick={() => openCart()}>
-         <img src={cartIcon} alt="" />
+         <Image src={cartIcon} width={32} height={32} alt="Cart" />
          <s.Quantity>
             <s.QuantityValue>3</s.QuantityValue>
          </s.Quantity>

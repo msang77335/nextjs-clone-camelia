@@ -7,11 +7,11 @@ import * as s from "../styles/emotion/StyleProductItem";
 import Slider from "react-slick";
 import { ProductSumary } from "../interface/index";
 
-interface Props {
+interface PropsProduct {
    product?: ProductSumary;
 }
 
-const ProductItem: React.FC<Props> = ({ product }) => {
+const ProductItem: React.FC<PropsProduct> = ({ product }) => {
    if (product.colors.length == 1) {
       product.colors.push({ name: "", value: "", image: "" });
    }
@@ -56,8 +56,9 @@ const ProductItem: React.FC<Props> = ({ product }) => {
                         {color.image.localeCompare("") != 0 && (
                            <Image
                               src={color.image}
-                              width={1000}
-                              height={1000}
+                              width={300}
+                              height={300}
+                              alt={product.name}
                            />
                         )}
                      </s.ImageBox>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import * as s from "../styles/emotion/StyleCartModalItem";
 
@@ -6,12 +7,14 @@ const CartModalItem: React.FC = () => {
    return (
       <s.Item>
          <s.Left>
-            <s.Image>
-               <img
-                  src="//product.hstatic.net/1000365849/product/11balocamelia_bfd424d0f91c44cfaf84a404bbd34d35_master.jpg"
-                  alt=""
+            <s.ImageBox>
+               <Image
+                  src="http://product.hstatic.net/1000365849/product/11balocamelia_bfd424d0f91c44cfaf84a404bbd34d35_master.jpg"
+                  width={100}
+                  height={100}
+                  alt="Product name"
                />
-            </s.Image>
+            </s.ImageBox>
             <s.InfoList>
                <s.InfoItem>
                   <Link href="">

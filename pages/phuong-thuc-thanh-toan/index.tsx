@@ -27,11 +27,11 @@ const Payment: React.FC = () => {
                      </s.Title>
                      <s.Des>
                         Bước 1: Các bạn mua hàng tại website camelia.vn và chọn
-                        'Thanh toán'
+                        &apos;Thanh toán&apos;
                      </s.Des>
                      <s.Des>
-                        Bước 2: Chọn ô 'Thanh toán tiền mặt khi nhận hàng' sau
-                        đó chọn 'Hoàn tất'
+                        Bước 2: Chọn ô &apos;Thanh toán tiền mặt khi nhận
+                        hàng&apos; sau đó chọn &apos;Hoàn tất&apos;
                      </s.Des>
                      <s.Image>
                         <Image
@@ -40,6 +40,7 @@ const Payment: React.FC = () => {
                            layout="responsive"
                            quality="100"
                            src="https://file.hstatic.net/1000365849/file/phuongthucthanhtoantienmatcamelia_29a9d5846e314795b667f72251671104.jpg"
+                           alt="Thanh toán tiền mặt"
                         />
                      </s.Image>
                      <s.Des>
@@ -55,11 +56,11 @@ const Payment: React.FC = () => {
                      <s.Title>2. Chuyển khoản ngân hàng</s.Title>
                      <s.Des>
                         Bước 1: Các bạn mua hàng tại website camelia.vn và chọn
-                        'Thanh toán'
+                        &apos;Thanh toán&apos;
                      </s.Des>
                      <s.Des>
-                        Bước 2: Chọn ô 'Chuyển khoản ngân hàng' và làm theo
-                        hướng dẫn cụ thể phía dưới
+                        Bước 2: Chọn ô &apos;Chuyển khoản ngân hàng&apos; và làm
+                        theo hướng dẫn cụ thể phía dưới
                      </s.Des>
                      <s.Image>
                         <Image
@@ -68,6 +69,7 @@ const Payment: React.FC = () => {
                            layout="responsive"
                            quality="100"
                            src="https://file.hstatic.net/1000365849/file/phuongthucthanhtoanonlinecamelia_6edcd0da46d843ac9b7968cb7fd362ca.jpg"
+                           alt="Thanh toán chuyển khoản"
                         />
                      </s.Image>
                      <s.Des>

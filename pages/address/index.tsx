@@ -49,6 +49,7 @@ const Address: React.FC = () => {
                         height={1327}
                         layout="responsive"
                         quality={100}
+                        alt="Chi nhánh 1"
                      />
                   </s.ImageBox>
                   <s.ImageBox>
@@ -58,6 +59,7 @@ const Address: React.FC = () => {
                         height={1372}
                         layout="responsive"
                         quality={100}
+                        alt="Chi nhánh 1"
                      />
                   </s.ImageBox>
                   <s.Des>
@@ -73,6 +75,7 @@ const Address: React.FC = () => {
                         height={1000}
                         layout="responsive"
                         quality={100}
+                        alt="Chi nhánh 2"
                      />
                   </s.ImageBox>
                   <s.ImageBox>
@@ -82,6 +85,7 @@ const Address: React.FC = () => {
                         height={1120}
                         layout="responsive"
                         quality={100}
+                        alt="Chi nhánh 2"
                      />
                   </s.ImageBox>
                   <s.Des>
@@ -97,6 +101,7 @@ const Address: React.FC = () => {
                         height={1000}
                         layout="responsive"
                         quality={100}
+                        alt="Chi nhánh 3"
                      />
                   </s.ImageBox>
                   <s.ImageBox>
@@ -106,6 +111,7 @@ const Address: React.FC = () => {
                         height={1372}
                         layout="responsive"
                         quality={100}
+                        alt="Chi nhánh 3"
                      />
                   </s.ImageBox>
                </s.Center>

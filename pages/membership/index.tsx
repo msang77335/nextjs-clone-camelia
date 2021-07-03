@@ -20,6 +20,7 @@ const Membership: React.FC = () => {
                      src="https://file.hstatic.net/1000365849/file/dadadad_b23f35981acb46d9b0aae8d94e6f665e.jpg"
                      width={2048}
                      height={1952}
+                     alt="Ưu đãi"
                   ></Image>
                </s.ImageBox>
                <s.Title as="h2">
@@ -73,13 +74,13 @@ const Membership: React.FC = () => {
                      - Khách hàng mua hàng online trên website chỉ cần nhập
                      <s.RedColor>
                         {" "}
-                        số điện thoại mua hàng của mình vào ô 'Code'{" "}
+                        số điện thoại mua hàng của mình vào ô &apos;Code&apos;{" "}
                      </s.RedColor>
                      tại Trang thanh toán là có thể nhận được Quyền lợi đúng của
                      hạng thẻ mình đang sở hữu. (Trong trường hợp khách hàng
                      chưa trở thành thành viên của Membership Program, các bạn
-                     đặt đơn hàng không cần nhập số điện thoại vào ô 'Code'
-                     chúng mình sẽ tự động cập nhật tích luỹ)
+                     đặt đơn hàng không cần nhập số điện thoại vào ô
+                     &apos;Code&apos; chúng mình sẽ tự động cập nhật tích luỹ)
                   </s.Des>{" "}
                </s.Block>
                <s.Block>

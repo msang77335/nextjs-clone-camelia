@@ -1,5 +1,6 @@
 import React from "react";
-import cartIcon from "../assets/images/icons8-search.svg";
+import Image from "next/image";
+import searchIcon from "../assets/images/icons8-search.svg";
 import * as s from "../styles/emotion/StyleSearchBox";
 
 const SearchBox: React.FC = () => {
@@ -7,7 +8,7 @@ const SearchBox: React.FC = () => {
       <s.Box>
          <s.Input type="text" placeholder="Nhập tên sản phẩm..." />
          <s.Submit>
-            <img src={cartIcon}></img>
+            <Image src={searchIcon} width={20} height={20} alt="Search" />
          </s.Submit>
       </s.Box>
    );

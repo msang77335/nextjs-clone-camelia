@@ -12,49 +12,55 @@ const Instagram: React.FC = () => {
                   <s.Item>
                      <Image
                         src="https://theme.hstatic.net/1000365849/1000616074/14/img_instagram1.jpg?v=81"
-                        width={1000}
-                        height={1000}
+                        width={300}
+                        height={300}
                         layout="responsive"
+                        alt="instagram.com"
                      />
                   </s.Item>
                   <s.Item>
                      <Image
                         src="https://theme.hstatic.net/1000365849/1000616074/14/img_instagram2.jpg?v=81"
-                        width={1000}
-                        height={1000}
+                        width={300}
+                        height={300}
                         layout="responsive"
+                        alt="instagram.com"
                      />
                   </s.Item>
                   <s.Item>
                      <Image
                         src="https://theme.hstatic.net/1000365849/1000614631/14/img_instagram1.jpg?v=81"
-                        width={1000}
-                        height={1000}
+                        width={300}
+                        height={300}
                         layout="responsive"
+                        alt="instagram.com"
                      />
                   </s.Item>
                   <s.Item>
                      <Image
                         src="https://theme.hstatic.net/1000365849/1000614631/14/img_instagram2.jpg?v=81"
-                        width={1000}
-                        height={1000}
+                        width={300}
+                        height={300}
                         layout="responsive"
+                        alt="instagram.com"
                      />
                   </s.Item>
                   <s.Item>
                      <Image
                         src="https://theme.hstatic.net/1000365849/1000614631/14/img_instagram3.jpg?v=81"
-                        width={1000}
-                        height={1000}
+                        width={300}
+                        height={300}
                         layout="responsive"
+                        alt="instagram.com"
                      />
                   </s.Item>
                   <s.Item>
                      <Image
                         src="https://theme.hstatic.net/1000365849/1000614631/14/img_instagram4.jpg?v=81"
-                        width={1000}
-                        height={1000}
+                        width={300}
+                        height={300}
                         layout="responsive"
+                        alt="instagram.com"
                      />
                   </s.Item>
                </s.List>

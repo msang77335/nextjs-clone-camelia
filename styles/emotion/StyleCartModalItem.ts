@@ -15,7 +15,7 @@ export const Left = styled.div`
 
 export const Right = styled.div``;
 
-export const Image = styled.div`
+export const ImageBox = styled.div`
    width: 6.5rem;
    height: 6.5rem;
 `;
