@@ -1,9 +1,15 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import { CaretDown } from "@emotion-icons/fa-solid";
 
 type SelectProps = {
    isOpen?: boolean;
 };
+
+export const CaretDownIcon = styled(CaretDown)`
+   width: 1.7rem;
+   height: 1.7rem;
+`;
 
 export const Selected = styled.div`
    min-width: 17rem;

@@ -24,8 +24,8 @@ export const Submit = styled.button`
    background-color: rgb(84, 84, 87);
    color: #ffff;
    border-radius: 3px;
-   width: 4rem;
-   height: 4rem;
+   width: 3.7rem;
+   height: 3.7rem;
    display: flex;
    align-items: center;
    justify-content: center;

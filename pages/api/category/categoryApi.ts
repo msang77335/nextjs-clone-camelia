@@ -86,29 +86,30 @@ const categoryApi = {
             .catch(() => reject({}));
       });
    },
-   // getProductsMayLike: async (slug: string) => {
-   //    return new Promise(async (resolve, reject) => {
-   //       const products: Product[] = await ProductSchema.find({
-   //          categorySlug: slug,
-   //       });
-   //       const productsSumary = [] as ProductSumary[];
-   //       await Promise.all(
-   //          products.map(async (product) => {
-   //             return productApi
-   //                .getSummary(product.slug)
-   //                .then((productSumary) => {
-   //                   productsSumary.push(productSumary);
-   //                });
-   //          })
-   //       )
-   //          .then(() => {
-   //             const productsMayLike: ProductSumary[] = productsSumary.filter(
-   //                (productSumary) => productSumary.slug.localeCompare(slug) != 0
-   //             );
-   //             resolve({ products: productsMayLike } as ProductsMayLike);
-   //          })
-   //          .catch(() => reject({}));
-   //    });
-   // },
+   getProductsMayLike: async (slug: string) => {
+      return new Promise(async (resolve, reject) => {
+         const product: Product = await ProductSchema.findOne({ slug: slug });
+         const products: Product[] = await ProductSchema.find({
+            categorySlug: product.categorySlug,
+         });
+         const productsSumary = [] as ProductSumary[];
+         await Promise.all(
+            products.map(async (product) => {
+               return productApi
+                  .getSummary(product.slug)
+                  .then((productSumary) => {
+                     productsSumary.push(productSumary);
+                  });
+            })
+         )
+            .then(() => {
+               const productsMayLike: ProductSumary[] = productsSumary.filter(
+                  (productSumary) => productSumary.slug.localeCompare(slug) != 0
+               );
+               resolve(productsMayLike);
+            })
+            .catch(() => reject({}));
+      });
+   },
 };
 export default categoryApi;

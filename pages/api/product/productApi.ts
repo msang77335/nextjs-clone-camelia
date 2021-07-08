@@ -22,44 +22,46 @@ const productApi = {
    getAll: async () => {
       return await ProductSchema.find({});
    },
-   // getDeteail: async (slug: string) => {
-   //    return new Promise(async (resolve, reject) => {
-   //       const productDetail = {} as ProductDetail;
-   //       const detail: DetailOfProduct = await DetailOfProductSchema.findOne({
-   //          productSlug: slug,
-   //       });
-   //       if (detail != null) {
-   //          productDetail.slug = slug;
-   //          productDetail.name = detail.name;
-   //          productDetail.price = detail.price;
-   //          productDetail.info = detail.info;
-   //          productDetail.infoList = detail.infoList;
-   //          productDetail.video = detail.video;
-   //          productDetail.description = detail.description;
-   //          const colorsOfProduct: ColorOfProduct[] =
-   //             await ColorOfProductSchema.find({
-   //                productSlug: slug,
-   //             });
-   //          Promise.all(
-   //             colorsOfProduct.map(async (colorOfProduct) => {
-   //                const color: Color = await ColorSchema.findOne({
-   //                   slug: colorOfProduct.colorSlug,
-   //                });
-   //                productDetail.colors.push({
-   //                   slug: color.slug,
-   //                   name: color.name,
-   //                   value: color.value,
-   //                   images: colorOfProduct.images,
-   //                } as ColorDetail);
-   //             })
-   //          ).then(() => {
-   //             resolve(productDetail);
-   //          });
-   //       } else {
-   //          reject({});
-   //       }
-   //    });
-   // },
+   getDetail: async (slug: string) => {
+      return new Promise(async (resolve, reject) => {
+         const productDetail = {} as ProductDetail;
+         const detail: DetailOfProduct = await DetailOfProductSchema.findOne({
+            productSlug: slug,
+         });
+         if (detail != null) {
+            productDetail.slug = slug;
+            productDetail.name = detail.name;
+            productDetail.price = detail.price;
+            productDetail.info = detail.info;
+            productDetail.infoList = [...detail.infoList];
+            productDetail.video = detail.video;
+            productDetail.description = [...detail.description];
+            productDetail.colors = [];
+            const colorsOfProduct: ColorOfProduct[] =
+               await ColorOfProductSchema.find({
+                  productSlug: slug,
+               });
+            Promise.all(
+               colorsOfProduct.map(async (colorOfProduct) => {
+                  return await ColorSchema.findOne({
+                     slug: colorOfProduct.colorSlug,
+                  }).then((color: Color) => {
+                     productDetail.colors.push({
+                        slug: color.slug,
+                        name: color.name,
+                        value: color.value,
+                        images: colorOfProduct.images,
+                     } as ColorDetail);
+                  });
+               })
+            ).then(() => {
+               resolve(productDetail);
+            });
+         } else {
+            reject({});
+         }
+      });
+   },
    getSummary: async (slug: string) => {
       return new Promise(async (resolve, reject) => {
          const productSumary = {} as ProductSumary;

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-   
+
 const DetailOfProductSchema = new Schema(
    {
       productSlug: String,
@@ -9,7 +9,9 @@ const DetailOfProductSchema = new Schema(
       info: String,
       infoList: [String],
       video: String,
-      description: [{ desType: String, value: String }],
+      description: [
+         { desType: String, value: String, width: Number, height: Number },
+      ],
    },
    { collection: "detail_of_product" }
 );

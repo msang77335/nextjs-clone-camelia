@@ -24,6 +24,8 @@ export interface ColorOfProduct {
 export interface DescOfProduct {
    desType?: string;
    value?: string;
+   width?: number;
+   height?: number;
 }
 
 export interface DetailOfProduct {

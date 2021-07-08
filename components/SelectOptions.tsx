@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import * as s from "../styles/emotion/StyleSelectOptions";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OutsideClickHandler from "react-outside-click-handler";
 
 interface Option {
@@ -19,7 +17,6 @@ const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
    const [isSelected, setIsSelected] = useState<Option>(
       options[0] || { key: -1, value: "" }
    );
-   //const [nowOptions, setNowOptions] = useState<Option[]>(options);
    const handleOnClick = () => {
       setIsOpen(!isOpen);
    };
@@ -28,12 +25,6 @@ const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
       setIsSelected(option);
       setIsOpen(false);
    };
-   // useEffect(() => {
-   //    const newOptions: Option[] = options.filter(
-   //       (option) => option.key != isSelected.key
-   //    );
-   //    setNowOptions(newOptions);
-   // }, [isSelected]);
    return (
       <OutsideClickHandler
          onOutsideClick={() => {
@@ -45,7 +36,7 @@ const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
             <s.Box>
                <s.Selected onClick={handleOnClick}>
                   <p>{isSelected.value}</p>
-                  <FontAwesomeIcon icon={faCaretDown} />
+                  <s.CaretDownIcon />
                </s.Selected>
                <s.List>
                   {options.map(
