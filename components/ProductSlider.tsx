@@ -43,7 +43,7 @@ const ProductSlider: React.FC<PropsSlider> = ({
             <s.Track>
                {dots.map((dot, i) => (
                   <motion.div
-                     key={images[i]}
+                     key={i}
                      variants={{
                         init: {
                            y: 100,
@@ -76,9 +76,8 @@ const ProductSlider: React.FC<PropsSlider> = ({
       ),
       customPaging: function (i) {
          return (
-            <s.DotImage>
+            <s.DotImage key={i}>
                <Image
-                  key={images[i]}
                   src={images[i]}
                   width={100}
                   height={100}
@@ -114,7 +113,7 @@ const ProductSlider: React.FC<PropsSlider> = ({
                {images.map((image, i) => (
                   <s.ImageBox key={i}>
                      <motion.div
-                        key={color}
+                        key={i}
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 0.65 }}

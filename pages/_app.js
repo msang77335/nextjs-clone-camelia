@@ -6,6 +6,8 @@ import Router from "next/router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 import { AnimatePresence } from "framer-motion";
+import { Provider } from "react-redux";
+import store from "../state/stote";
 
 NProgress.configure({ showSpinner: false });
 Router.onRouteChangeStart = (url) => {
@@ -15,12 +17,14 @@ Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
 function MyApp({ Component, pageProps, router }) {
-   return ( 
-      <Layout>
-         <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} key={router.route} />
-         </AnimatePresence>
-      </Layout>
+   return (
+      <Provider store={store}>
+         <Layout>
+            <AnimatePresence exitBeforeEnter>
+               <Component {...pageProps} key={router.route} />
+            </AnimatePresence>
+         </Layout>
+      </Provider>
    );
 }
 

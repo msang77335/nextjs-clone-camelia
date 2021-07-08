@@ -17,7 +17,7 @@ const ProductTabDes: React.FC<PropsDescription> = ({ descOfProductList }) => {
                );
             } else {
                return (
-                  <s.ImageContent>
+                  <s.ImageContent key={i}>
                      <Image
                         key={i}
                         src={descOfProduct.value}

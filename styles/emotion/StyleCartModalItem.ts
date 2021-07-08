@@ -29,6 +29,7 @@ export const InfoItem = styled.li`
 `;
 
 export const Name = styled.p`
+   text-transform: capitalize;
    font-weight: 700;
    color: #333333;
    transition: all 0.25s linear;
@@ -38,6 +39,7 @@ export const Name = styled.p`
 `;
 
 export const Color = styled.p`
+   text-transform: capitalize;
    color: #666666;
 `;
 

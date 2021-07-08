@@ -3,24 +3,10 @@ import * as s from "../styles/emotion/StyleFromAddToCart";
 import Counter from "./Counter";
 import { ProductDetail } from "../interface/index";
 import useCouter from "../hooks/UseCouter";
-
-interface ColorData {
-   slug?: string;
-   value?: string;
-}
-
-interface ProductData {
-   slug?: string;
-   name?: string;
-   price?: number;
-   image?: string;
-   quantity?: string;
-}
-
-interface CartData {
-   color?: ColorData;
-   product?: ProductData;
-}
+import { Product } from "../interface/CartInterface";
+import { useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
+import { actionCreators } from "../state";
 
 interface PropsCart {
    productDetail?: ProductDetail;
@@ -33,22 +19,24 @@ const FormAddToCart: React.FC<PropsCart> = ({
    indexColor,
    handleChangeColor,
 }) => {
+   const dispatch = useDispatch();
+   const { addToCart } = bindActionCreators(actionCreators, dispatch);
    const [quantity, onChange, minusClick, plusClick] = useCouter();
    const handleAddToCart = () => {
       const cartData = {
-         product: {
+         productInfo: {
             name: productDetail.name,
             slug: productDetail.slug,
             price: productDetail.price,
             image: productDetail.colors[indexColor].images[0],
-            quantity: quantity,
          },
-         color: {
+         colorInfo: {
             slug: productDetail.colors[indexColor].slug,
-            value: productDetail.colors[indexColor].value,
+            name: productDetail.colors[indexColor].name,
          },
-      } as CartData;
-      console.log(cartData);
+         quantity: parseInt(quantity),
+      } as Product;
+      addToCart(cartData);
    };
    return (
       <div>

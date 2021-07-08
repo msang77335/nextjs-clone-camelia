@@ -2,40 +2,58 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import * as s from "../styles/emotion/StyleCartModalItem";
+import { Product } from "../interface/CartInterface";
+import { useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
+import { actionCreators } from "../state";
 
-const CartModalItem: React.FC = () => {
+interface PropsProduct {
+   closeCart?: Function;
+   product?: Product;
+}
+
+const CartModalItem: React.FC<PropsProduct> = ({ product, closeCart }) => {
+   const dispatch = useDispatch();
+   const { removeFromCart } = bindActionCreators(actionCreators, dispatch);
    return (
       <s.Item>
          <s.Left>
             <s.ImageBox>
-               <Image
-                  src="http://product.hstatic.net/1000365849/product/11balocamelia_bfd424d0f91c44cfaf84a404bbd34d35_master.jpg"
-                  width={100}
-                  height={100}
-                  alt="Product name"
-               />
+               <Link href={`products/${product.productInfo.slug}`}>
+                  <a>
+                     <Image
+                        onClick={() => closeCart()}
+                        src={product.productInfo.image}
+                        width={100}
+                        height={100}
+                        alt="Product name"
+                     />
+                  </a>
+               </Link>
             </s.ImageBox>
             <s.InfoList>
                <s.InfoItem>
-                  <Link href="">
+                  <Link href={`products/${product.productInfo.slug}`}>
                      <a>
-                        <s.Name>Global Backpack</s.Name>
+                        <s.Name onClick={() => closeCart()}>
+                           {product.productInfo.name}
+                        </s.Name>
                      </a>
                   </Link>
                </s.InfoItem>
                <s.InfoItem>
-                  <s.Color>Phiên bản: Black</s.Color>
+                  <s.Color>Phiên bản: {product.colorInfo.name}</s.Color>
                </s.InfoItem>
                <s.InfoItem>
-                  <s.Quantity>Số lượng: 1</s.Quantity>
+                  <s.Quantity>Số lượng: {product.quantity}</s.Quantity>
                </s.InfoItem>
                <s.InfoItem>
-                  <s.Price>450,000đ</s.Price>
+                  <s.Price>{product.productInfo.price}</s.Price>
                </s.InfoItem>
             </s.InfoList>
          </s.Left>
          <s.Right>
-            <s.BtnDel>Xóa</s.BtnDel>
+            <s.BtnDel onClick={() => removeFromCart(product)}>Xóa</s.BtnDel>
          </s.Right>
       </s.Item>
    );

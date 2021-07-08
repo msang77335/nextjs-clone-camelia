@@ -22,7 +22,7 @@ const Counter: React.FC<CounterProps> = ({
                disabled={quantity === "1" ? true : false}
                onClick={() => minusClick()}
             />
-            <s.CountInput value={quantity} onChange={() => onChange()} />
+            <s.CountInput value={quantity} onChange={(e) => onChange(e)} />
             <s.CountPlus
                disabled={quantity === "9999999" ? true : false}
                onClick={() => plusClick()}
