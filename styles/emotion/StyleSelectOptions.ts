@@ -20,12 +20,21 @@ export const Selected = styled.div`
    padding: 1rem;
 `;
 
+export const Title = styled.p`
+   @media (max-width: 500px) {
+      display: none;
+   }
+`;
+
 export const Box = styled.div`
    margin-left: 1rem;
    background-color: #ffff;
    border: 1px solid #ccc;
    border-radius: 5px;
    transition: all 0.3s ease;
+   @media (max-width: 414px) {
+      margin-left: 0;
+   }
 `;
 
 export const List = styled.ul`
@@ -37,6 +46,7 @@ export const List = styled.ul`
    opacity: 0;
    visibility: hidden;
    transition: all 0.3s ease;
+   z-index: 10;
 `;
 
 export const Item = styled.li`

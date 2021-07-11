@@ -1,12 +1,14 @@
 import { useState } from "react";
 
-const useCouter = (): [
+const useCouter = (
+   initValue: number
+): [
    string,
    (e: React.ChangeEvent<HTMLInputElement>) => void,
    () => void,
    () => void
 ] => {
-   const [value, setValue] = useState("1");
+   const [value, setValue] = useState(initValue.toString() || "1");
 
    const minusClick = () => {
       setValue((parseInt(value) - 1).toString());

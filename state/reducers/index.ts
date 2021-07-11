@@ -1,8 +1,12 @@
 import { combineReducers } from "redux";
 import { cartReducer } from "./CartReducers";
+import { cartModalReducer } from "./CartModalReducers";
 
-const allReducers = combineReducers({ cart: cartReducer });
+const rootReducer = combineReducers({
+   cart: cartReducer,
+   cartModal: cartModalReducer,
+});
 
-export default allReducers;
+export default rootReducer;
 
-export type State = ReturnType<typeof allReducers>;
+export type State = ReturnType<typeof rootReducer>;

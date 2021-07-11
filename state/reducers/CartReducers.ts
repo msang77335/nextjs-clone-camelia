@@ -3,13 +3,15 @@ import { ActionType } from "../action-types";
 import { Action } from "../actions";
 
 export interface CartState {
-   amount: number;
-   products: Product[];
+   amount?: number;
+   products?: Product[];
+   totalPrice?: number;
 }
 
 const initialState = {
    amount: 0,
    products: [],
+   totalPrice: 0,
 };
 
 export const cartReducer = (
@@ -34,15 +36,32 @@ export const cartReducer = (
                      ? {
                           ...product,
                           quantity: product.quantity + action.payload.quantity,
+                          totalPrice:
+                             action.payload.productInfo.price *
+                             (product.quantity + action.payload.quantity),
                        }
                      : product
                ),
+               totalPrice:
+                  state.totalPrice +
+                  action.payload.productInfo.price * action.payload.quantity,
             };
          } else {
             return {
                ...state,
                amount: state.amount + action.payload.quantity,
-               products: [...state.products, { ...action.payload }],
+               products: [
+                  ...state.products,
+                  {
+                     ...action.payload,
+                     totalPrice:
+                        action.payload.productInfo.price *
+                        action.payload.quantity,
+                  },
+               ],
+               totalPrice:
+                  state.totalPrice +
+                  action.payload.productInfo.price * action.payload.quantity,
             };
          }
       case ActionType.REMOVE_FROM_CART:
@@ -53,6 +72,22 @@ export const cartReducer = (
                (product) =>
                   JSON.stringify(product) !== JSON.stringify(action.payload)
             ),
+            totalPrice:
+               state.totalPrice -
+               action.payload.productInfo.price * action.payload.quantity,
+         };
+      case ActionType.UPDATE_CART:
+         const amount = action.payload
+            .map((product) => product.quantity * 1)
+            .reduce((a, b) => a + b, 0);
+         const totalPrice = action.payload
+            .map((product) => product.quantity * product.productInfo.price)
+            .reduce((a, b) => a + b, 0);
+         return {
+            ...state,
+            amount: amount,
+            products: action.payload,
+            totalPrice: totalPrice,
          };
       default:
          return state;

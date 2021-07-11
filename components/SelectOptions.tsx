@@ -32,7 +32,7 @@ const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
          }}
       >
          <s.Select isOpen={isOpen}>
-            <p>Sắp xếp theo</p>
+            <s.Title>Sắp xếp theo</s.Title>
             <s.Box>
                <s.Selected onClick={handleOnClick}>
                   <p>{isSelected.value}</p>

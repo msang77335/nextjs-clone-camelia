@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import { GetStaticProps, InferGetStaticPropsType, GetStaticPaths } from "next";
 import { AnimatePresence } from "framer-motion";
 import { ProductDetail, ProductSumary, Product } from "../../interface";
 import productApi from "../api/product/productApi";
 import categoryApi from "../api/category/categoryApi";
-import ProductDetailPage from "../../components/ProductDetailPage";
+const ProductDetailPage = dynamic(
+   () => import("../../components/ProductDetailPage")
+);
 
 interface PropsProductDetail {
    productDetail?: ProductDetail;

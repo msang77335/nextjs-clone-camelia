@@ -14,4 +14,5 @@ export interface Product {
    colorInfo?: ColorInfo;
    productInfo?: ProductInfo;
    quantity?: number;
+   totalPrice?: number;
 }

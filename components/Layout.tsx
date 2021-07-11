@@ -1,13 +1,14 @@
 import React, { ReactChild, ReactChildren, useEffect, useState } from "react";
-import Banner from "./Banner";
-import HeaderTop from "./HeaderTop";
-import HeaderBottom from "./HeaderBottom";
-import SideBarSearch from "./SideBarSearch";
-import SideBarCategory from "./SideBarCategory";
-import Footer from "./Footer";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import Messenger from "./Messenger";
-import CartModal from "./CartModal";
+const Banner = dynamic(() => import("./Banner"));
+const HeaderTop = dynamic(() => import("./HeaderTop"));
+const HeaderBottom = dynamic(() => import("./HeaderBottom"));
+const SideBarSearch = dynamic(() => import("./SideBarSearch"));
+const SideBarCategory = dynamic(() => import("./SideBarCategory"));
+const Footer = dynamic(() => import("./Footer"));
+const Messenger = dynamic(() => import("./Messenger"));
+const CartModal = dynamic(() => import("./CartModal"));
 
 interface Props {
    children: ReactChild | ReactChild[] | ReactChildren | ReactChildren[];
@@ -16,7 +17,6 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
    const [isOpenSearch, setIsOpenSearch] = useState(false);
    const [isOpenCategory, setIsOpenCategory] = useState(false);
-   const [isOpenCart, setIsOpenCart] = useState(false);
 
    useEffect(() => {
       window.addEventListener("resize", () => {
@@ -29,18 +29,13 @@ const Layout: React.FC<Props> = ({ children }) => {
 
    const toggleSearch = () => setIsOpenSearch(!isOpenSearch);
    const toggleCategory = () => setIsOpenCategory(!isOpenCategory);
-   const toggleCart = () => setIsOpenCart(!isOpenCart);
    return (
       <motion.div
          initial={{ opacity: 0 }}
          animate={{ opacity: 1 }}
          transition={{ duration: 0.65 }}
       >
-         <HeaderTop
-            openSearch={toggleSearch}
-            openCategory={toggleCategory}
-            openCart={toggleCart}
-         />
+         <HeaderTop openSearch={toggleSearch} openCategory={toggleCategory} />
          <HeaderBottom />
          <Banner />
          <SideBarSearch closeSearch={toggleSearch} status={isOpenSearch} />
@@ -48,7 +43,7 @@ const Layout: React.FC<Props> = ({ children }) => {
             closeCategory={toggleCategory}
             status={isOpenCategory}
          />
-         <CartModal status={isOpenCart} closeCart={toggleCart} />
+         <CartModal />
          {children}
          <Footer />
          <Messenger />

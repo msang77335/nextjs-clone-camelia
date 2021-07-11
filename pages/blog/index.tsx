@@ -37,11 +37,10 @@ const Blog: React.FC = () => {
                      mái, trẻ trung mà nó mang lại.
                   </s.Des>
                   <Image
-                     quality={100}
                      src="https://file.hstatic.net/1000365849/file/2vicamelia_9212ebebf5ca47399fb2eec80a6b2c02.jpg"
                      alt="Picture of the author"
-                     width={1500}
-                     height={1000}
+                     width={1200}
+                     height={800}
                   />
                   <s.Des>
                      Phong cách thời trang tối giản – minimalism được nhiều
@@ -92,9 +91,8 @@ const Blog: React.FC = () => {
                   <Image
                      src="https://file.hstatic.net/1000365849/file/3tuicheocamelia_e270461071264fa984c63d5282f2dcdd.jpg"
                      alt="Picture of the author"
-                     width={1500}
-                     height={1000}
-                     quality={100}
+                     width={1200}
+                     height={800}
                   />
                   <s.Des>
                      Sắc màu Camelia lựa chọn cho sản phẩm đều rất nền nã, trung
@@ -123,9 +121,8 @@ const Blog: React.FC = () => {
                   <Image
                      src="https://file.hstatic.net/1000365849/file/6balocamelia_296321f0f6c84c8593ed8d478485e002.jpg"
                      alt="Picture of the author"
-                     width={1500}
-                     height={1000}
-                     quality={100}
+                     width={1200}
+                     height={800}
                   />
                   <s.Des>
                      Ngoài tiêu chí đơn giản, gọn gàng để người dùng sử dụng
@@ -156,9 +153,8 @@ const Blog: React.FC = () => {
                   <Image
                      src="https://file.hstatic.net/1000365849/file/4tuinhocamelia_4c56f8bc63cc4b9faba032a7419c5f4f.jpg"
                      alt="Picture of the author"
-                     width={1500}
-                     height={1000}
-                     quality={100}
+                     width={1200}
+                     height={800}
                   />
                   <s.Des>
                      Chất liệu của túi Camelia là loại vải 900D hiếm có tại Việt

@@ -14,3 +14,21 @@ export const removeFromCart = (product: Product) => {
       dispatch({ type: ActionType.REMOVE_FROM_CART, payload: product });
    };
 };
+
+export const updateCart = (products: Product[]) => {
+   return (dispatch: Dispatch<Action>) => {
+      dispatch({ type: ActionType.UPDATE_CART, payload: products });
+   };
+};
+
+export const openCartModal = () => {
+   return (dispatch: Dispatch<Action>) => {
+      dispatch({ type: ActionType.OPEN_CART_MODAL, payload: null });
+   };
+};
+
+export const closeCartModal = () => {
+   return (dispatch: Dispatch<Action>) => {
+      dispatch({ type: ActionType.CLOSE_CART_MODAL, payload: null });
+   };
+};

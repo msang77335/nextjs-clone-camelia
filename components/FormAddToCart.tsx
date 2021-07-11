@@ -20,8 +20,11 @@ const FormAddToCart: React.FC<PropsCart> = ({
    handleChangeColor,
 }) => {
    const dispatch = useDispatch();
-   const { addToCart } = bindActionCreators(actionCreators, dispatch);
-   const [quantity, onChange, minusClick, plusClick] = useCouter();
+   const { addToCart, openCartModal } = bindActionCreators(
+      actionCreators,
+      dispatch
+   );
+   const [quantity, onChange, minusClick, plusClick] = useCouter(1);
    const handleAddToCart = () => {
       const cartData = {
          productInfo: {
@@ -37,6 +40,7 @@ const FormAddToCart: React.FC<PropsCart> = ({
          quantity: parseInt(quantity),
       } as Product;
       addToCart(cartData);
+      openCartModal();
    };
    return (
       <div>
@@ -59,6 +63,7 @@ const FormAddToCart: React.FC<PropsCart> = ({
             onChange={onChange}
             minusClick={minusClick}
             plusClick={plusClick}
+            isTitle
          />
          <s.Actions>
             <s.BtnAddToCart onClick={() => handleAddToCart()}>

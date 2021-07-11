@@ -6,6 +6,7 @@ interface CounterProps {
    onChange?: Function;
    minusClick?: Function;
    plusClick?: Function;
+   isTitle?: boolean;
 }
 
 const Counter: React.FC<CounterProps> = ({
@@ -13,10 +14,11 @@ const Counter: React.FC<CounterProps> = ({
    onChange,
    minusClick,
    plusClick,
+   isTitle,
 }) => {
    return (
       <s.Count>
-         <s.CountTitle>Số lượng</s.CountTitle>
+         {isTitle && <s.CountTitle>Số lượng</s.CountTitle>}
          <s.CountBox>
             <s.CountMinus
                disabled={quantity === "1" ? true : false}

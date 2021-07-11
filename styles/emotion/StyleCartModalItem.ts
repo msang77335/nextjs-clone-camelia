@@ -57,3 +57,7 @@ export const BtnDel = styled.button`
    background-color: transparent;
    border: none;
 `;
+
+export const PriceUnit = styled.span`
+   text-decoration: underline;
+`;

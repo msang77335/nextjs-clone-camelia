@@ -15,17 +15,12 @@ export const ReplyIcon = styled(Reply)`
 
 export const Content = styled.div`
    width: 27rem;
-   position: fixed;
-   z-index: 200;
-   top: -40rem;
    right: 1.5rem;
    background-color: #ffffff;
    transition: all 0.3s ease;
    border-radius: 5px;
    border: 1px solid #f0ebeb;
    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-   opacity: 0;
-   visibility: hidden;
 `;
 
 export const Top = styled.div`
@@ -46,13 +41,24 @@ export const Title = styled.span`
 export const Text = styled.p`
    color: #666666;
    margin-bottom: 2rem;
-`;
-
-export const Link = styled.span`
-   color: #d61c1f;
-   transition: all 0.25s linear;
-   &:hover {
-      color: #e95658;
+   a {
+      color: #d61c1f;
+      position: relative;
+      &:before {
+         content: "";
+         position: absolute;
+         left: 2px;
+         bottom: -1px;
+         transition: all 0.25s linear;
+         width: 0;
+         height: 1px;
+         background-color: #d61c1f;
+      }
+      &:hover {
+         &:before {
+            width: 100%;
+         }
+      }
    }
 `;
 
@@ -94,15 +100,18 @@ export const Actions = styled.div`
 `;
 
 export const BtnAction = styled.button`
-   padding: 0.9rem;
    width: calc(50% - 0.5rem);
    text-transform: uppercase;
    font-weight: 700;
    border-radius: 3px;
    border: none;
-   color: #ffffff;
    font-size: 1.2rem;
    transition: all 0.25s linear;
+   a {
+      display: inline-block;
+      padding: 0.9rem;
+      color: #ffffff;
+   }
 `;
 
 export const BtnEdit = styled(BtnAction)`
@@ -124,8 +133,11 @@ export const Total = styled.div`
    text-align: right;
 `;
 
-export const Price = styled.p`
+export const PriceTitle = styled.span`
    text-transform: uppercase;
+`;
+
+export const Price = styled.p`
    font-size: 1.6rem;
    font-weight: 700;
    color: #666666;
@@ -159,20 +171,14 @@ export const Modal = styled.div`
                  opacity: 1;
                  visibility: visible;
               }
-              ${Content} {
-                 opacity: 1;
-                 visibility: visible;
-                 top: 5.5rem;
-              }
            `
          : css`
               ${Backgroud} {
                  opacity: 0;
                  visibility: hidden;
               }
-              ${Content} {
-                 opacity: 0;
-                 visibility: hidden;
-              }
            `}
+`;
+export const PriceUnit = styled.span`
+   text-decoration: underline;
 `;

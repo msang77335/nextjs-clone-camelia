@@ -1,13 +1,14 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import * as s from "../styles/emotion/StyleHome";
-import ImageSlider from "../components/ImageSlider";
-import Collections from "../components/Collections";
-import LifeStyle from "../components/LifeStyle";
-import Instagram from "../components/Instagram";
 import categoryApi from "./api/category/categoryApi";
 import { ProductsByCategory } from "../interface/index";
 import { motion } from "framer-motion";
+const ImageSlider = dynamic(() => import("../components/ImageSlider"));
+const Collections = dynamic(() => import("../components/Collections"));
+const LifeStyle = dynamic(() => import("../components/LifeStyle"));
+const Instagram = dynamic(() => import("../components/Instagram"));
 
 interface PropsHome {
    productsAllCategory: ProductsByCategory[];

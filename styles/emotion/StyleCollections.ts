@@ -9,12 +9,19 @@ export const Name = styled.p`
    text-transform: uppercase;
    font-size: 2.3rem;
    color: #333333;
+   @media (max-width: 414px) {
+      margin-bottom: 1rem;
+   }
 `;
 
 export const Top = styled.div`
    display: flex;
    align-items: center;
    justify-content: space-between;
+   @media (max-width: 414px) {
+      flex-direction: column;
+      align-items: flex-start;
+   }
 `;
 
 export const Title = styled.p`

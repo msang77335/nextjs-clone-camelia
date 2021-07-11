@@ -1,10 +1,5 @@
 import styled from "@emotion/styled";
-
-export const Count = styled.div`
-   margin-top: 1rem;
-   display: flex;
-   align-items: center;
-`;
+import { css } from "@emotion/react";
 
 export const CountTitle = styled.p`
    font-weight: 700;
@@ -25,13 +20,14 @@ export const CountInput = styled.input`
    padding: 0.5rem;
    height: 3rem;
    width: 10rem;
-   background-color: #ededed;
+   background-color: transparent;
 `;
 
 export const CountBtn = styled.button`
    border: 1px solid #404040;
    width: 3rem;
    height: 3rem;
+   background-color: transparent;
    &:hover {
       &:before,
       &:after {
@@ -83,4 +79,8 @@ export const CountMinus = styled(CountBtn)`
       height: 1px;
       background-color: rgb(102, 102, 102);
    }
+`;
+export const Count = styled.div`
+   display: flex;
+   align-items: center;
 `;

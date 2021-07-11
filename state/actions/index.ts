@@ -11,4 +11,24 @@ interface RemoveCartAction {
    payload: Product;
 }
 
-export type Action = AddCartAction | RemoveCartAction;
+interface UpdateCartAction {
+   type: ActionType.UPDATE_CART;
+   payload: Product[];
+}
+
+interface OpenCartModalAction {
+   type: ActionType.OPEN_CART_MODAL;
+   payload: null;
+}
+
+interface CloseCartModalAction {
+   type: ActionType.CLOSE_CART_MODAL;
+   payload: null;
+}
+
+export type Action =
+   | AddCartAction
+   | RemoveCartAction
+   | OpenCartModalAction
+   | CloseCartModalAction
+   | UpdateCartAction;

@@ -8,21 +8,23 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from "../state";
 
 interface PropsProduct {
-   closeCart?: Function;
    product?: Product;
 }
 
-const CartModalItem: React.FC<PropsProduct> = ({ product, closeCart }) => {
+const CartModalItem: React.FC<PropsProduct> = ({ product }) => {
    const dispatch = useDispatch();
-   const { removeFromCart } = bindActionCreators(actionCreators, dispatch);
+   const { removeFromCart, closeCartModal } = bindActionCreators(
+      actionCreators,
+      dispatch
+   );
    return (
       <s.Item>
          <s.Left>
             <s.ImageBox>
-               <Link href={`products/${product.productInfo.slug}`}>
+               <Link href={`/products/${product.productInfo.slug}`}>
                   <a>
                      <Image
-                        onClick={() => closeCart()}
+                        onClick={() => closeCartModal()}
                         src={product.productInfo.image}
                         width={100}
                         height={100}
@@ -33,9 +35,9 @@ const CartModalItem: React.FC<PropsProduct> = ({ product, closeCart }) => {
             </s.ImageBox>
             <s.InfoList>
                <s.InfoItem>
-                  <Link href={`products/${product.productInfo.slug}`}>
+                  <Link href={`/products/${product.productInfo.slug}`}>
                      <a>
-                        <s.Name onClick={() => closeCart()}>
+                        <s.Name onClick={() => closeCartModal()}>
                            {product.productInfo.name}
                         </s.Name>
                      </a>
@@ -48,7 +50,12 @@ const CartModalItem: React.FC<PropsProduct> = ({ product, closeCart }) => {
                   <s.Quantity>Số lượng: {product.quantity}</s.Quantity>
                </s.InfoItem>
                <s.InfoItem>
-                  <s.Price>{product.productInfo.price}</s.Price>
+                  <s.Price>
+                     {product.productInfo.price
+                        .toString()
+                        .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}
+                     <s.PriceUnit>đ</s.PriceUnit>
+                  </s.Price>
                </s.InfoItem>
             </s.InfoList>
          </s.Left>

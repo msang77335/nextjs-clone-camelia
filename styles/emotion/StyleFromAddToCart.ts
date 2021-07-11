@@ -14,6 +14,7 @@ export const ColorTitle = styled.p`
 export const ColorList = styled.ul`
    display: flex;
    padding: 1rem 0;
+   margin-bottom: 1rem;
 `;
 
 export const ColorItem = styled.li``;
