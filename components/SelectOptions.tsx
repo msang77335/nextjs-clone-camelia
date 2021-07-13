@@ -8,11 +8,16 @@ interface Option {
 }
 
 interface Props {
+   isTitle?: boolean;
    options: Option[];
    handleOptionChange: Function;
 }
 
-const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
+const SelectOptions: React.FC<Props> = ({
+   options,
+   handleOptionChange,
+   isTitle,
+}) => {
    const [isOpen, setIsOpen] = useState<boolean>(false);
    const [isSelected, setIsSelected] = useState<Option>(
       options[0] || { key: -1, value: "" }
@@ -32,7 +37,7 @@ const SelectOptions: React.FC<Props> = ({ options, handleOptionChange }) => {
          }}
       >
          <s.Select isOpen={isOpen}>
-            <s.Title>Sắp xếp theo</s.Title>
+            {isTitle && <s.Title>Sắp xếp theo</s.Title>}
             <s.Box>
                <s.Selected onClick={handleOnClick}>
                   <p>{isSelected.value}</p>

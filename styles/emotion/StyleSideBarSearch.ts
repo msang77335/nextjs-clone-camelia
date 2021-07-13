@@ -6,7 +6,6 @@ type SideBarProps = {
    isOpen?: Boolean;
 };
 
-
 export const SearchIcon = styled(Search)`
    color: #c1c1c1;
    width: 1.7rem;
@@ -51,12 +50,16 @@ export const Label = styled.p`
    color: #555555;
 `;
 
-export const SearchBox = styled.form`
+export const SearchBox = styled.div`
+   position: relative;
+   margin-top: 5rem;
+`;
+
+export const SearchForm = styled.form`
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 1.5rem;
-   margin-top: 5rem;
+   padding: 1rem 1.5rem;
    background-color: #f5f4f4;
    border-radius: 2px;
    position: relative;
@@ -64,7 +67,7 @@ export const SearchBox = styled.form`
       content: "";
       position: absolute;
       left: 0;
-      bottom: -2rem;
+      bottom: -1.5rem;
       width: 100%;
       border-bottom: 1px dotted #c1c1c1;
    }
@@ -74,6 +77,59 @@ export const Submit = styled.button`
    color: #c1c1c1;
    background-color: transparent;
    border: none;
+`;
+
+export const Result = styled.div`
+   position: absolute;
+   width: 100%;
+`;
+
+export const ResultList = styled.ul`
+   margin-top: 0.5rem;
+   background-color: #ffffff;
+`;
+
+export const ResultItem = styled.li`
+   display: flex;
+   align-items: center;
+   padding: 1rem 0;
+   border-bottom: 1px dotted #c1c1c1;
+   transition: all 0.25s linear;
+   &:hover {
+      background-color: #f5f4f4;
+   }
+`;
+
+export const Image = styled.div`
+   margin-right: 1rem;
+`;
+
+export const Info = styled.div`
+   font-weight: 700;
+   font-size: 1.2rem;
+`;
+
+export const Name = styled.p`
+   margin-bottom: 0.7rem;
+   text-transform: capitalize;
+   color: #333333;
+`;
+
+export const Price = styled.p`
+   color: #d61c1f;
+`;
+
+export const Text = styled.p`
+   margin-top: 0.5rem;
+   padding: 1.5rem 1rem;
+   color: #666666;
+   border-radius: 3px;
+   box-shadow: 0 1px 3px 0 #7d7d7d;
+   background-color: #ffffff;
+`;
+
+export const PriceUnit = styled.span`
+   text-decoration: underline;
 `;
 
 export const BtnClose = styled.button`

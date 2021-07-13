@@ -69,6 +69,11 @@ export interface ProductDetail {
    colors?: ColorDetail[];
 }
 
+export interface ProductsByKeyWord {
+   keyWord?: string;
+   products?: ProductSumary[];
+}
+
 export interface ProductsByCategory {
    category?: Category;
    products?: ProductSumary[];

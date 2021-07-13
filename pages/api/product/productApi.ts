@@ -95,5 +95,28 @@ const productApi = {
          }
       });
    },
+   getByKeyWord: async (keyWord: string) => {
+      return new Promise(async (resolve, reject) => {
+         const productsSumary = [] as ProductSumary[];
+         const products = await DetailOfProductSchema.find({
+            name: { $regex: keyWord },
+         });
+         await Promise.all(
+            products.map(async (product) => {
+               return productApi
+                  .getSummary(product.productSlug)
+                  .then((productSumary: ProductSumary) => {
+                     productsSumary.push(productSumary);
+                  });
+            })
+         )
+            .then(() => {
+               resolve({ keyWord: keyWord, products: productsSumary });
+            })
+            .catch(() => {
+               reject([]);
+            });
+      });
+   },
 };
 export default productApi;

@@ -43,8 +43,8 @@ const SideBarCategory: React.FC<Props> = ({ closeCategory, status }) => {
                         </a>
                      </Link>
                   </s.Category>
-                  <s.Category>
-                     <Link href="/123">
+                  <s.Category onClick={() => closeCategory()}>
+                     <Link href="/collections/wallets">
                         <a>
                            <s.ImageBox>
                               <s.ImageNotHover
@@ -77,8 +77,8 @@ const SideBarCategory: React.FC<Props> = ({ closeCategory, status }) => {
                         </a>
                      </Link>
                   </s.Category>
-                  <s.Category>
-                     <Link href="/123">
+                  <s.Category onClick={() => closeCategory()}>
+                     <Link href="/collections/crossbody-bags">
                         <a>
                            <s.ImageBox>
                               <s.ImageNotHover

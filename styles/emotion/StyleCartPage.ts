@@ -202,6 +202,8 @@ export const BtnPay = styled(BtnAction)`
 export const CartEmtpy = styled.div`
    display: flex;
    justify-content: center;
+   align-items: center;
+   min-height: 28.5rem;
 `;
 
 export const Text = styled.p`

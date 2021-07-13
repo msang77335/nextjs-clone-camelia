@@ -17,9 +17,6 @@ interface Option {
 
 const Collections: React.FC<Props> = ({ info, page }) => {
    const [products, setProducts] = useState<ProductSumary[]>(info.products);
-   useEffect(() => {
-      setProducts(info.products);
-   }, [info]);
 
    const options: Option[] = [
       { key: 0, value: "Tất cả sản phẩm" },
@@ -51,6 +48,7 @@ const Collections: React.FC<Props> = ({ info, page }) => {
             <s.Top>
                <s.Name as="h2">{info.category.name}</s.Name>
                <SelectOptions
+                  isTitle
                   options={options}
                   handleOptionChange={handleOptionChange}
                />
