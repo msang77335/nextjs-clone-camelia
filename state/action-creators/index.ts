@@ -21,6 +21,12 @@ export const updateCart = (products: Product[]) => {
    };
 };
 
+export const resetCart = () => {
+   return (dispatch: Dispatch<Action>) => {
+      dispatch({ type: ActionType.RESET_CART, payload: null });
+   };
+};
+
 export const openCartModal = () => {
    return (dispatch: Dispatch<Action>) => {
       dispatch({ type: ActionType.OPEN_CART_MODAL, payload: null });

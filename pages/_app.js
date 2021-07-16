@@ -1,7 +1,8 @@
 import "../styles/globals/reset.css";
 import "../styles/globals/globals.css";
 import "../styles/libraries/_nprogress.scss";
-import Layout from "../components/Layout";
+import "../styles/libraries/_sweetAlert.scss";
+import MainLayout from "../components/Layout";
 import Router from "next/router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
@@ -18,6 +19,7 @@ Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
 function MyApp({ Component, pageProps, router }) {
+   const Layout = Component.Layout || MainLayout;
    return (
       <Provider store={store}>
          <PersistGate loading={null} persistor={persistor}>

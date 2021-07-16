@@ -89,6 +89,13 @@ export const cartReducer = (
             products: action.payload,
             totalPrice: totalPrice,
          };
+      case ActionType.RESET_CART:
+         return {
+            ...state,
+            amount: 0,
+            products: [] as Product[],
+            totalPrice: 0,
+         };
       default:
          return state;
    }

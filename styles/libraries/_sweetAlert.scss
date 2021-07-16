@@ -1,0 +1,25 @@
+@font-face {
+   font-family: "Futura";
+   src: url(../../font/SFUFuturaRegular.TTF);
+}
+.swal-title,
+.swal-text {
+   font-family: "Futura";
+}
+.swal-button-container {
+   background-color: transparent;
+}
+.swal-button {
+   &:focus {
+      box-shadow: none;
+   }
+}
+.swal-button.swal-button--confirm {
+   font-family: Arial, Helvetica, sans-serif;
+   border-radius: 3px;
+   background-color: #338dbc;
+   transition: all 0.25s linear;
+   &:hover {
+      background-color: #399ccf;
+   }
+}

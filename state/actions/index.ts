@@ -16,6 +16,11 @@ interface UpdateCartAction {
    payload: Product[];
 }
 
+interface ResetCartAction {
+   type: ActionType.RESET_CART;
+   payload: null;
+}
+
 interface OpenCartModalAction {
    type: ActionType.OPEN_CART_MODAL;
    payload: null;
@@ -31,4 +36,5 @@ export type Action =
    | RemoveCartAction
    | OpenCartModalAction
    | CloseCartModalAction
-   | UpdateCartAction;
+   | UpdateCartAction
+   | ResetCartAction;

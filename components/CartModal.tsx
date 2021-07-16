@@ -75,7 +75,7 @@ const CartModal: React.FC = () => {
                                     </Link>
                                  </s.BtnEdit>
                                  <s.BtnPay onClick={() => closeCartModal()}>
-                                    <Link href="/cart">
+                                    <Link href="/checkouts">
                                        <a>thanh toán</a>
                                     </Link>
                                  </s.BtnPay>
