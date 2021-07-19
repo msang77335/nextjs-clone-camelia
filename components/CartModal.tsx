@@ -87,7 +87,7 @@ const CartModal: React.FC = () => {
                            <s.Text>Giỏ hàng trống !!!</s.Text>
                            <s.Text>
                               Tiếp tục mua hàng
-                              <Link href="/collections/all">
+                              <Link href="/collections/all/1">
                                  <a onClick={() => closeCartModal()}>
                                     {" "}
                                     tại đây

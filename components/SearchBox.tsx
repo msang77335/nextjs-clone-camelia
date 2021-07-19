@@ -9,7 +9,7 @@ import SearchBoxResultItem from "./SearchBoxResultItem";
 import useInput from "../hooks/UseInput";
 
 const SearchBox: React.FC = () => {
-   const [value, onChange, resetValue] = useInput("");
+   const [value, onChange, error, setError, resetValue] = useInput("");
    const [resultList, setResultList] = useState([]);
    const [focused, setFocused] = React.useState(false);
    const router = useRouter();
@@ -50,7 +50,7 @@ const SearchBox: React.FC = () => {
                onFocus={onFocus}
                onBlur={onBlur}
             />
-            <Link href={`/search?products=${value}`}>
+            <Link href={`/search?products=${value}`} passHref={true}>
                <s.Submit onClick={() => resetValue()}>
                   <Image src={searchIcon} width={20} height={20} alt="Search" />
                </s.Submit>
@@ -68,13 +68,26 @@ const SearchBox: React.FC = () => {
                   <s.Result>
                      {resultList.length > 0 ? (
                         <s.ResultList>
-                           {resultList.map((result, i) => (
-                              <SearchBoxResultItem
-                                 key={i}
-                                 product={result}
-                                 onClick={handleClickResutlItem}
-                              />
-                           ))}
+                           {resultList.map((result, i) => {
+                              if (i < 4) {
+                                 return (
+                                    <SearchBoxResultItem
+                                       key={i}
+                                       product={result}
+                                       onClick={handleClickResutlItem}
+                                    />
+                                 );
+                              }
+                           })}
+                           {resultList.length > 4 && (
+                              <s.SeeMore>
+                                 <Link href={`/search?products=${value}`}>
+                                    <a onClick={() => resetValue()}>
+                                       Xem Thêm {resultList.length - 4} sản phẩm
+                                    </a>
+                                 </Link>
+                              </s.SeeMore>
+                           )}
                         </s.ResultList>
                      ) : (
                         <s.Text>Không có sản phẩm phù hợp...</s.Text>

@@ -29,6 +29,9 @@ img {
    height: 100%;
    object-fit: cover;
 }
+select {
+   font-family: "Futura", sans-serif;
+}
 body {
    font-family: "Futura", sans-serif;
    font-size: 1.4rem;

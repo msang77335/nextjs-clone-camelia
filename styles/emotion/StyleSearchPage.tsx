@@ -68,12 +68,23 @@ export const Submit = styled.button`
 
 export const List = styled.ul`
    display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   margin-right: -1rem;
 `;
 
 export const Item = styled.li`
-   width: calc(16.66% - 1.25rem);
+   width: calc(16.66% - 1rem);
+   margin-right: 1rem;
+   margin-top: 2rem;
+   @media (max-width: 1280px) {
+      width: calc(25% - 1rem);
+   }
+   @media (max-width: 860px) {
+      width: calc(33.33% - 1rem);
+   }
    @media (max-width: 768px) {
-      width: calc(50% - 1.25rem);
+      width: calc(50% - 1rem);
    }
 `;
 

@@ -30,6 +30,13 @@ const SelectOptions: React.FC<Props> = ({
       setIsSelected(option);
       setIsOpen(false);
    };
+   const handleChangeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+      const optionFind = options.find(
+         (option) => option.key === parseInt(e.target.value)
+      );
+      handleOptionChange(optionFind.key);
+      setIsSelected(optionFind);
+   };
    return (
       <OutsideClickHandler
          onOutsideClick={() => {
@@ -39,6 +46,25 @@ const SelectOptions: React.FC<Props> = ({
          <s.Select isOpen={isOpen}>
             {isTitle && <s.Title>Sắp xếp theo</s.Title>}
             <s.Box>
+               <s.SelectTag onClick={handleOnClick}>
+                  <select
+                     onChange={(e) => handleChangeSelect(e)}
+                     value={isSelected.key}
+                  >
+                     {options.map((option, i) => (
+                        <s.OptionTag
+                           isChose={
+                              isSelected.key === option.key ? true : false
+                           }
+                           key={i}
+                           value={option.key}
+                        >
+                           {option.value}
+                        </s.OptionTag>
+                     ))}
+                  </select>
+                  <s.CaretDownIcon />
+               </s.SelectTag>
                <s.Selected onClick={handleOnClick}>
                   <p>{isSelected.value}</p>
                   <s.CaretDownIcon />

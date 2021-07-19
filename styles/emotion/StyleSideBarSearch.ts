@@ -100,6 +100,14 @@ export const ResultItem = styled.li`
    }
 `;
 
+export const SeeMore = styled.div`
+   padding: 2rem;
+   text-align: center;
+   a {
+      color: #d61c1f;
+   }
+`;
+
 export const Image = styled.div`
    margin-right: 1rem;
 `;

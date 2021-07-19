@@ -12,7 +12,7 @@ interface Props {
 }
 
 const SideBarSearch: React.FC<Props> = ({ closeSearch, status }) => {
-   const [value, onChange, resetValue] = useInput("");
+   const [value, onChange, error, setError, resetValue] = useInput("");
    const [resultList, setResultList] = useState([]);
    const router = useRouter();
    const handleClickResutlItem = () => {
@@ -60,7 +60,7 @@ const SideBarSearch: React.FC<Props> = ({ closeSearch, status }) => {
                      value={value}
                      onChange={onChange}
                   />
-                  <Link href={`/search?products=${value}`}>
+                  <Link href={`/search?products=${value}`} passHref={true}>
                      <s.Submit onClick={handleClickSearch}>
                         <s.SearchIcon />
                      </s.Submit>
@@ -78,13 +78,27 @@ const SideBarSearch: React.FC<Props> = ({ closeSearch, status }) => {
                         <s.Result>
                            {resultList.length > 0 ? (
                               <s.ResultList>
-                                 {resultList.map((result, i) => (
-                                    <SideBarSearchResultItem
-                                       key={i}
-                                       product={result}
-                                       onClick={handleClickResutlItem}
-                                    />
-                                 ))}
+                                 {resultList.map((result, i) => {
+                                    if (i < 4) {
+                                       return (
+                                          <SideBarSearchResultItem
+                                             key={i}
+                                             product={result}
+                                             onClick={handleClickResutlItem}
+                                          />
+                                       );
+                                    }
+                                 })}
+                                 {resultList.length > 4 && (
+                                    <s.SeeMore>
+                                       <Link href={`/search?products=${value}`}>
+                                          <a onClick={handleClickSearch}>
+                                             Xem Thêm {resultList.length - 4}{" "}
+                                             sản phẩm
+                                          </a>
+                                       </Link>
+                                    </s.SeeMore>
+                                 )}
                               </s.ResultList>
                            ) : (
                               <s.Text>Không có sản phẩm phù hợp...</s.Text>

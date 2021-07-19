@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import emtpyIcon from "../../assets/images/box.svg";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,8 +9,8 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { motion, AnimatePresence } from "framer-motion";
 import useInput from "../../hooks/UseInput";
 import * as s from "../../styles/emotion/StyleSearchPage";
-import ProductItem from "../../components/ProductItem";
-import SelectOptions from "../../components/SelectOptions";
+const ProductItem = dynamic(() => import("../../components/ProductItem"));
+const SelectOptions = dynamic(() => import("../../components/SelectOptions"));
 import productApi from "../api/product/productApi";
 import { ProductsByKeyWord, ProductSumary } from "../../interface/index";
 
@@ -42,13 +43,16 @@ export const getServerSideProps: GetServerSideProps<PropsSearchPage> = async (
 const Search: React.FC<PropsSearchPage> = ({
    productsByKeyWord,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+   const router = useRouter();
+   const [value, onChange, error, setError, resetValue] = useInput("");
    const [products, setProducts] = useState<ProductSumary[]>(
       productsByKeyWord.products
    );
 
    useEffect(() => {
       setProducts(productsByKeyWord.products);
-   }, [productsByKeyWord.keyWord]);
+      resetValue();
+   }, [productsByKeyWord.products]);
 
    const options: Option[] = [
       { key: 0, value: "Tất cả sản phẩm" },
@@ -76,12 +80,11 @@ const Search: React.FC<PropsSearchPage> = ({
       }
    };
 
-   const router = useRouter();
-   const [value, onChange] = useInput("");
    const handleSubmit = (e) => {
       e.preventDefault();
       const href = `/search?products=${value}`;
       router.push(href);
+      resetValue();
    };
    return (
       <motion.div
@@ -153,7 +156,12 @@ const Search: React.FC<PropsSearchPage> = ({
                         transition={{ duration: 0.45 }}
                      >
                         <s.Emtpy>
-                           <Image src={emtpyIcon} width={50} height={50} />
+                           <Image
+                              src={emtpyIcon}
+                              width={50}
+                              height={50}
+                              alt="emtpy"
+                           />
                            <s.Text>
                               Không tìm thấy sản phẩm nào phù hợp...
                            </s.Text>

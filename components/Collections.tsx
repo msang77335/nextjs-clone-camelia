@@ -18,6 +18,10 @@ interface Option {
 const Collections: React.FC<Props> = ({ info, page }) => {
    const [products, setProducts] = useState<ProductSumary[]>(info.products);
 
+   useEffect(() => {
+      setProducts(info.products);
+   });
+
    const options: Option[] = [
       { key: 0, value: "Tất cả sản phẩm" },
       { key: 1, value: "Giá thấp đến cao" },

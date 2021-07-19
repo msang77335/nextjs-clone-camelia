@@ -56,7 +56,11 @@ const CollectionsPage: React.FC<PropsCollections> = ({
          </Head>
          <s.CollectionContentMain>
             <s.Content>
-               <Collections page={true} info={productsByCategory} />
+               <Collections
+                  // key={productsByCategory.category.slug}
+                  page={true}
+                  info={productsByCategory}
+               />
             </s.Content>
          </s.CollectionContentMain>
       </motion.div>

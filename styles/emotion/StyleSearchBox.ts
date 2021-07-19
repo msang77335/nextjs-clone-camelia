@@ -42,8 +42,18 @@ export const ResultItem = styled.li`
    &:hover {
       background-color: #ededed;
    }
-   &:last-of-type {
-      border-bottom-color: transparent;
+`;
+
+export const SeeMore = styled.div`
+   padding: 1rem;
+   text-align: center;
+   background-color: #ededed;
+   a {
+      color: #666666;
+      transition: all 0.25s linear;
+      &:hover {
+         color: #d61c1f;
+      }
    }
 `;
 

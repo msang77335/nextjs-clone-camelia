@@ -5,18 +5,23 @@ import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../state";
 import { motion, AnimatePresence } from "framer-motion";
+import dynamic from "next/dynamic";
 import * as s from "../../styles/emotion/StyleCheckouts";
 import Link from "next/link";
 import swal from "sweetalert";
-import EmtpyLayout from "../../components/EmtpyLayout";
-import CheckoutsSelect from "../../components/CheckoutsSelect";
 import addressApi from "../api/address/addressApi";
 import transferCostApi from "../api/address/transferCostApi";
-import CheckoutsProductItem from "../../components/CheckoutsProductItem";
-import FormGroup from "../../components/FormGroup";
 import useInput from "../../hooks/UseInput";
 import validateInfo from "../../validation/validateInfo";
 import useSelectOption from "../../hooks/UseSelectOption";
+import EmtpyLayout from "../../components/EmtpyLayout";
+const CheckoutsProductItem = dynamic(
+   () => import("../../components/CheckoutsProductItem")
+);
+const CheckoutsSelect = dynamic(
+   () => import("../../components/CheckoutsSelect")
+);
+const FormGroup = dynamic(() => import("../../components/FormGroup"));
 
 interface Option {
    key: number;
@@ -112,7 +117,7 @@ const Checkouts: React.FC & { Layout: React.FC } = () => {
             const wardData = await addressApi.getWard(district.key);
             wardData.map((wardDataItem) =>
                newWardOptions.push({
-                  key: wardDataItem.WardCode,
+                  key: parseInt(wardDataItem.WardCode),
                   value: wardDataItem.WardName,
                })
             );
@@ -407,7 +412,10 @@ const Checkouts: React.FC & { Layout: React.FC } = () => {
                                        Số-điện-thoại-của-bạn
                                     </p>
                                     <span></span>
-                                    <p>Sau đó, bấm nút 'Hoàn tất' phía dưới.</p>
+                                    <p>
+                                       Sau đó, bấm nút &apos;Hoàn tất&apos; phía
+                                       dưới.
+                                    </p>
                                  </s.RadioDesc>
                               </s.RadioItem>
                            </s.RadioList>
@@ -440,7 +448,7 @@ const Checkouts: React.FC & { Layout: React.FC } = () => {
                      <CheckoutsProductItem key={i} product={product} />
                   ))}
                </s.ProductList>
-               <s.CodeForm>
+               {/* <s.CodeForm>
                   <s.FormRow>
                      <s.Code>
                         <FormGroup
@@ -455,7 +463,7 @@ const Checkouts: React.FC & { Layout: React.FC } = () => {
                         Sử dụng
                      </s.Btn>
                   </s.FormRow>
-               </s.CodeForm>
+               </s.CodeForm> */}
                <s.Fee>
                   <s.FeeRow>
                      <p>Tạm tính</p>

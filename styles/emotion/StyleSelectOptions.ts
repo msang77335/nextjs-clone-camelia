@@ -6,6 +6,10 @@ type SelectProps = {
    isOpen?: boolean;
 };
 
+type OptionProps = {
+   isChose?: boolean;
+};
+
 export const CaretDownIcon = styled(CaretDown)`
    width: 1.7rem;
    height: 1.7rem;
@@ -18,12 +22,48 @@ export const Selected = styled.div`
    align-items: center;
    cursor: pointer;
    padding: 1rem;
+   @media (max-device-width: 768px) {
+      display: none;
+   }
 `;
 
 export const Title = styled.p`
    @media (max-width: 500px) {
       display: none;
    }
+`;
+
+export const SelectTag = styled.div`
+   position: relative;
+   min-width: 17rem;
+   cursor: pointer;
+   display: none;
+   justify-content: space-between;
+   align-items: center;
+   select {
+      min-width: 17rem;
+      border: none;
+      border-radius: 5px;
+      color: #666666;
+      appearance: none;
+      padding: 0.85rem 1rem;
+      cursor: pointer;
+   }
+   ${CaretDownIcon} {
+      position: absolute;
+      right: 1rem;
+   }
+   @media (max-device-width: 768px) {
+      display: flex;
+   }
+`;
+
+export const OptionTag = styled.option`
+   ${(props: OptionProps) =>
+      props.isChose &&
+      css`
+         display: none;
+      `}
 `;
 
 export const Box = styled.div`
@@ -47,6 +87,9 @@ export const List = styled.ul`
    visibility: hidden;
    transition: all 0.3s ease;
    z-index: 10;
+   @media (max-device-width: 768px) {
+      display: none;
+   }
 `;
 
 export const Item = styled.li`

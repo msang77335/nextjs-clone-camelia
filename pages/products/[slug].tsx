@@ -5,7 +5,6 @@ import { GetStaticProps, InferGetStaticPropsType, GetStaticPaths } from "next";
 import { AnimatePresence } from "framer-motion";
 import { ProductDetail, ProductSumary, Product } from "../../interface";
 import productApi from "../api/product/productApi";
-import categoryApi from "../api/category/categoryApi";
 const ProductDetailPage = dynamic(
    () => import("../../components/ProductDetailPage")
 );
@@ -20,7 +19,7 @@ export const getStaticProps: GetStaticProps<PropsProductDetail> = async (
 ) => {
    const productSlug: string = content.params.slug.toString();
    const productDetail: ProductDetail = await productApi.getDetail(productSlug);
-   const productsMayLike = await categoryApi.getProductsMayLike(
+   const productsMayLike = await productApi.getProductsMayLike(
       productDetail.slug
    );
    return {

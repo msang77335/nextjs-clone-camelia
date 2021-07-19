@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ProductDetail, ProductSumary } from "../interface";
 import { AnimatePresence, motion } from "framer-motion";
-import dynamic from "next/dynamic";
 import * as s from "../styles/emotion/StyleProductsDetail";
 import ProductSlider from "./ProductSlider";
 import ProductTabs from "./ProductTabs";

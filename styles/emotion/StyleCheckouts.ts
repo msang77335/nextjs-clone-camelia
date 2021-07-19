@@ -167,7 +167,7 @@ export const Phone = styled.div`
 
 export const Select = styled.div`
    width: calc(50% - 0.5rem);
-   @media (max-width: 680px) {
+   @media (max-width: 768px) {
       width: 100%;
    }
 `;
@@ -176,7 +176,7 @@ export const SelectLeft = styled.div`
    width: calc(66% - 0.5rem);
    display: flex;
    justify-content: space-between;
-   @media (max-width: 680px) {
+   @media (max-width: 768px) {
       width: 100%;
       flex-wrap: wrap;
       ${Select} {
@@ -190,7 +190,7 @@ export const SelectLeft = styled.div`
 
 export const SelectRight = styled.div`
    width: calc(34% - 0.5rem);
-   @media (max-width: 680px) {
+   @media (max-width: 768px) {
       margin-top: 1.5rem;
       width: 100%;
    }
@@ -426,6 +426,7 @@ export const Code = styled.div`
 export const Fee = styled.div`
    padding: 2rem 0;
    color: #717171;
+   border-top: 1px solid #e1e1e1;
    border-bottom: 1px solid #e1e1e1;
 `;
 

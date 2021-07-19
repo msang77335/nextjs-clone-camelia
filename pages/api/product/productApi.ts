@@ -4,6 +4,7 @@ import ProductSchema from "../../../models/Product";
 import DetailOfProductSchema from "../../../models/DetailOfProduct";
 import ColorOfProductSchema from "../../../models/ColorOfProduct";
 import {
+   Product,
    ColorOfProduct,
    Color,
    ColorDetail,
@@ -21,6 +22,9 @@ const productApi = {
    },
    getAll: async () => {
       return await ProductSchema.find({});
+   },
+   getCount: async () => {
+      return await ProductSchema.find({}).countDocuments();
    },
    getDetail: async (slug: string) => {
       return new Promise(async (resolve, reject) => {
@@ -116,6 +120,57 @@ const productApi = {
             .catch(() => {
                reject([]);
             });
+      });
+   },
+   getInPage: async (page: number) => {
+      return new Promise(async (resolve, reject) => {
+         const productsSumary = [] as ProductSumary[];
+         const products = await ProductSchema.find({})
+            .limit(12)
+            .skip((page - 1) * 12);
+         await Promise.all(
+            products.map(async (product) => {
+               return productApi
+                  .getSummary(product.slug)
+                  .then((productSumary: ProductSumary) => {
+                     productsSumary.push(productSumary);
+                  });
+            })
+         )
+            .then(() => {
+               resolve({
+                  category: { name: "tất cả sản phẩm", value: "all" },
+                  products: productsSumary,
+               });
+            })
+            .catch(() => {
+               reject([]);
+            });
+      });
+   },
+   getProductsMayLike: async (slug: string) => {
+      return new Promise(async (resolve, reject) => {
+         const product: Product = await ProductSchema.findOne({ slug: slug });
+         const products: Product[] = await ProductSchema.find({
+            $and: [
+               { categorySlug: product.categorySlug },
+               { slug: { $nin: product.slug } },
+            ],
+         }).limit(5);
+         const productsSumary = [] as ProductSumary[];
+         await Promise.all(
+            products.map(async (product) => {
+               return productApi
+                  .getSummary(product.slug)
+                  .then((productSumary) => {
+                     productsSumary.push(productSumary);
+                  });
+            })
+         )
+            .then(() => {
+               resolve(productsSumary);
+            })
+            .catch(() => reject({}));
       });
    },
 };

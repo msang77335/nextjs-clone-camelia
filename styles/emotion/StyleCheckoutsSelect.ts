@@ -9,9 +9,61 @@ type SelectProps = {
    isDisable?: boolean;
 };
 
+type OptionProps = {
+   isChose?: boolean;
+};
+
 export const CaretDownIcon = styled(CaretDown)`
    width: 1.7rem;
    height: 1.7rem;
+`;
+
+export const Label = styled.label`
+   cursor: pointer;
+   position: absolute;
+   left: 1rem;
+   top: 1rem;
+   color: #999999;
+   transition: all 0.25s ease-in-out;
+   background-color: #ffffff;
+`;
+
+export const SelectTag = styled.div`
+   position: relative;
+   z-index: 2;
+   cursor: pointer;
+   display: none;
+   justify-content: space-between;
+   align-items: center;
+   select {
+      cursor: pointer;
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: none;
+      border-radius: 5px;
+      color: #666666;
+      appearance: none;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: transparent;
+   }
+   ${CaretDownIcon} {
+      position: absolute;
+      right: 1rem;
+   }
+   ${Label} {
+      z-index: -1;
+   }
+   @media (max-device-width: 768px) {
+      display: flex;
+   }
+`;
+
+export const OptionTag = styled.option`
+   ${(props: OptionProps) =>
+      props.isChose &&
+      css`
+         display: none;
+      `}
 `;
 
 export const Selected = styled.div`
@@ -40,15 +92,9 @@ export const Selected = styled.div`
          background-color: #cccccc;
       }
    }
-`;
-
-export const Label = styled.label`
-   position: absolute;
-   left: 1rem;
-   top: 1rem;
-   color: #999999;
-   transition: all 0.25s ease-in-out;
-   background-color: #ffffff;
+   @media (max-device-width: 768px) {
+      display: none;
+   }
 `;
 
 export const Error = styled.p`
@@ -111,6 +157,9 @@ export const List = styled.ul`
    /* Handle on hover */
    ::-webkit-scrollbar-thumb:hover {
       background: #338dbc;
+   }
+   @media (max-device-width: 768px) {
+      display: none;
    }
 `;
 

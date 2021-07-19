@@ -59,7 +59,7 @@ const Categories: React.FC = () => {
                   </Link>
                </s.Item>
                <s.Item>
-                  <Link href="/123">
+                  <Link href="/collections/crossbody-bags">
                      <a>
                         <s.ImageBox>
                            <s.ImageNotHover

@@ -19,6 +19,7 @@ const CheckoutsProductItem: React.FC<PropsCheckoutsProductItem> = ({
                      src={product.productInfo.image}
                      width={60}
                      height={60}
+                     alt={product.productInfo.slug}
                   />
                </s.ImageBox>
                <s.Amount>
