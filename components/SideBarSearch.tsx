@@ -21,9 +21,7 @@ const SideBarSearch: React.FC<Props> = ({ closeSearch, status }) => {
    };
    useEffect(() => {
       async function fetchProducts(keyWork: string) {
-         const response = await fetch(
-            `http://localhost:3000/api/product/${keyWork}`
-         );
+         const response = await fetch(`/api/product/${keyWork}`);
          const responseJSON = await response.json();
          const { products } = responseJSON;
          setResultList(products);

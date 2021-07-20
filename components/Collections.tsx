@@ -20,7 +20,7 @@ const Collections: React.FC<Props> = ({ info, page }) => {
 
    useEffect(() => {
       setProducts(info.products);
-   });
+   }, [info.products]);
 
    const options: Option[] = [
       { key: 0, value: "Tất cả sản phẩm" },

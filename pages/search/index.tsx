@@ -52,7 +52,7 @@ const Search: React.FC<PropsSearchPage> = ({
    useEffect(() => {
       setProducts(productsByKeyWord.products);
       resetValue();
-   }, [productsByKeyWord.products]);
+   });
 
    const options: Option[] = [
       { key: 0, value: "Tất cả sản phẩm" },
