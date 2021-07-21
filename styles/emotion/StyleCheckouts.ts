@@ -404,6 +404,7 @@ export const ToggleProductsRight = styled.div``;
 
 export const ProductList = styled.ul`
    padding-top: 1.5rem;
+   border-bottom: 1px solid #e1e1e1;
    @media (max-width: 1024px) {
       padding: 2.5rem 10rem 1rem;
    }
@@ -498,7 +499,6 @@ export const Code = styled.div`
 export const Fee = styled.div`
    padding: 2rem 0;
    color: #717171;
-   border-top: 1px solid #e1e1e1;
    border-bottom: 1px solid #e1e1e1;
    @media (max-width: 1024px) {
       padding: 0 10rem;
