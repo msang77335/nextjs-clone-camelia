@@ -31,26 +31,26 @@ const About: React.FC = () => {
                </s.Top>
                <s.Center>
                   <s.Des>
-                     &emsp;&emsp;&nbsp;Chắc hẳn chúng ta đều đã và đang gặp phải
-                     những rắc rối nhỏ nhặt trong cuộc sống hàng ngày từ việc
-                     túi áo quần bị quá tải bởi nhiều vật dụng cho tới việc chìa
-                     khóa, tai nghe, điện thoại bị thất lạc trong chính chiếc
-                     balo, túi xách mà chúng ta bỏ vào một cách lộn xộn. Nhưng
-                     rồi chúng ta dần cho đó là thói quen và sống chung với
-                     những vấn đề &quot;nhỏ nhặt&quot; này...
+                     &emsp;&emsp;&nbsp;Chắc hẳn chúng ta đều đã và đang gặp phải
+                     những rắc rối nhỏ nhặt trong cuộc sống hằng ngày từ việc
+                     túi áo quần bị quá tải bởi nhiều vật dụng cho tới việc chìa
+                     khóa, tai nghe điện thoại bị thất lạc trong chính chiếc
+                     balo, túi xách mà chúng ta bỏ vào một cách lộn xộn. Nhưng
+                     rồi chúng ta dần cho đó là thói quen và sống chung với
+                     những vấn đề &quot;nhỏ nhặt&quot; này...
                   </s.Des>
                   <s.Des>
-                     &emsp;&emsp;&nbsp;Với thông điệp &quot;More than
-                     Simplicity&quot;, Camelia dành trọn tâm huyết để làm ra các
-                     sản phẩm của mình. Không chỉ là sự đơn giản ở thiết kế bên
-                     ngoài giúp cho người dùng đỡ mất thời gian suy nghĩ đến
-                     việc lựa chọn quần áo phù hợp, mà thiết kế bên trong của
-                     mỗi sản phẩm đều được chăm chút, tinh gọn nhằm tạo ra sự
+                     &emsp;&emsp;&nbsp;Với thông điệp &quot;More than
+                     Simplicity&quot;, Camelia dành trọn tâm huyết để làm ra các
+                     sản phẩm của mình. Không chỉ là sự đơn giản ở thiết kế bên
+                     ngoài giúp cho người dùng đỡ mất thời gian suy nghĩ đến
+                     việc lựa chọn quần áo phù hợp, mà thiết kế bên trong của
+                     mỗi sản phẩm đều được chăm chút, tinh gọn nhằm tạo ra sự
                      tiện lợi và ngăn nắp cho người sử dụng.
                   </s.Des>
                   <s.Des>
-                     &emsp;&emsp;&nbsp;Hãy trải nghiệm và cảm nhận sự thay đổi
-                     của bản thân bạn cùng với Camelia nhé!
+                     &emsp;&emsp;&nbsp;Hãy trải nghiệm và cảm nhận sự thay đổi
+                     của bản thân bạn cùng với Camelia nhé!
                   </s.Des>
                   <s.ImageBox>
                      <Image
@@ -59,7 +59,10 @@ const About: React.FC = () => {
                         width={600}
                         height={600}
                         layout="responsive"
-                        quality={100}
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://file.hstatic.net/1000365849/file/ll_9e4d431b90a94b42b2b56f8aedd701fc_grande.jpg"
+                        }
                      />
                   </s.ImageBox>
                </s.Center>

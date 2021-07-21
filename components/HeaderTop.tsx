@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import * as s from "../styles/emotion/StyleHeader";
-import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBox from "./SearchBox";
 import CartIcon from "./CartIcon";
 
@@ -25,10 +23,10 @@ const HeaderTop: React.FC<Props> = ({ openSearch, openCategory }) => {
                   </a>
                </Link>
                <s.Btn onClick={() => openCategory()}>
-                  <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+                  <s.BarsIcon />
                </s.Btn>
                <s.Btn onClick={() => openSearch()}>
-                  <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+                  <s.SearchIcon />
                </s.Btn>
             </s.Left>
             <Link href="/">
@@ -39,7 +37,6 @@ const HeaderTop: React.FC<Props> = ({ openSearch, openCategory }) => {
                   />
                </a>
             </Link>
-
             <s.Right>
                <Link href="/">
                   <a>

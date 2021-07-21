@@ -20,6 +20,8 @@ const CheckoutsProductItem: React.FC<PropsCheckoutsProductItem> = ({
                      width={60}
                      height={60}
                      alt={product.productInfo.slug}
+                     placeholder="blur"
+                     blurDataURL={product.productInfo.image}
                   />
                </s.ImageBox>
                <s.Amount>

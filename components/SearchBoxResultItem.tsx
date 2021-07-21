@@ -20,6 +20,8 @@ const SearchBoxResultItem: React.FC<PropsResult> = ({ product, onClick }) => {
                      width={50}
                      height={50}
                      alt={product.name}
+                     placeholder="blur"
+                     blurDataURL={product.colors[0].image}
                   />
                </s.Image>
                <s.Info>

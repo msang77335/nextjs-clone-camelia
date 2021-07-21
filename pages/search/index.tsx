@@ -51,7 +51,6 @@ const Search: React.FC<PropsSearchPage> = ({
 
    useEffect(() => {
       setProducts(productsByKeyWord.products);
-      resetValue();
    });
 
    const options: Option[] = [
@@ -115,20 +114,22 @@ const Search: React.FC<PropsSearchPage> = ({
                      options={options}
                      handleOptionChange={handleOptionChange}
                   />
-                  <s.Input
-                     placeholder="Nhập tên sản phẩm..."
-                     name="product"
-                     value={value}
-                     onChange={onChange}
-                     autoComplete="off"
-                  />
-                  <s.Submit type="submit">
-                     <Link href={`/search?products=${value}`}>
-                        <a>
-                           <s.SearchIcon />
-                        </a>
-                     </Link>
-                  </s.Submit>
+                  <s.FormGroup>
+                     <s.Input
+                        placeholder="Nhập tên sản phẩm..."
+                        name="product"
+                        value={value}
+                        onChange={onChange}
+                        autoComplete="off"
+                     />
+                     <s.Submit type="submit">
+                        <Link href={`/search?products=${value}`}>
+                           <a>
+                              <s.SearchIcon />
+                           </a>
+                        </Link>
+                     </s.Submit>
+                  </s.FormGroup>
                </s.SearchBox>
                <AnimatePresence exitBeforeEnter>
                   {products.length > 0 ? (

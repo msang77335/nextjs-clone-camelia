@@ -36,6 +36,10 @@ export const Name = styled.p`
    &:hover {
       color: #d61c1f;
    }
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Color = styled.p`
@@ -50,6 +54,10 @@ export const Quantity = styled.p`
 export const Price = styled.p`
    font-weight: 700;
    color: #d61c1f;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const BtnDel = styled.button`

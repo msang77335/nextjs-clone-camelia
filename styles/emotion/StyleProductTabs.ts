@@ -36,11 +36,21 @@ export const TabBtn = styled.button`
    color: ${(props: TabProps) => (props.isActive ? "#333333" : "#bbb9b9")};
    border-color: ${(props: TabProps) =>
       props.isActive ? "#333333" : "#bbb9b9"};
+   @media (max-device-width: 1024px) {
+      // font-family: "FuturaBold";
+      font-weight: 400;
+      border-top: transparent;
+      border-left: transparent;
+      border-right: transparent;
+      border-radius: 0;
+      font-size: 1.7rem;
+   }
 `;
 
 export const TabContents = styled.div`
    position: relative;
    width: 100%;
+   line-height: 1.5;
 `;
 
 export const TabContent = styled.div`

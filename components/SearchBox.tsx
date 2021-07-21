@@ -11,7 +11,8 @@ import useInput from "../hooks/UseInput";
 const SearchBox: React.FC = () => {
    const [value, onChange, error, setError, resetValue] = useInput("");
    const [resultList, setResultList] = useState([]);
-   const [focused, setFocused] = React.useState(false);
+   const [focused, setFocused] = useState(false);
+   const [isFetching, setIsFetching] = useState(true);
    const router = useRouter();
    const onFocus = () => setFocused(true);
    const onBlur = () => setFocused(false);
@@ -24,9 +25,11 @@ const SearchBox: React.FC = () => {
          const responseJSON = await response.json();
          const { products } = responseJSON;
          setResultList(products);
+         setIsFetching(false);
       }
       if (value) {
          fetchProducts(value);
+         setIsFetching(true);
       } else {
          setResultList([]);
       }
@@ -50,7 +53,9 @@ const SearchBox: React.FC = () => {
             />
             <Link href={`/search?products=${value}`} passHref={true}>
                <s.Submit onClick={() => resetValue()}>
-                  <Image src={searchIcon} width={20} height={20} alt="Search" />
+                  <span>
+                     <Image src={searchIcon} layout="fill" alt="Search" />
+                  </span>
                </s.Submit>
             </Link>
          </s.SearchForm>
@@ -87,6 +92,8 @@ const SearchBox: React.FC = () => {
                               </s.SeeMore>
                            )}
                         </s.ResultList>
+                     ) : isFetching ? (
+                        <s.Text>Đang tìm kiếm...</s.Text>
                      ) : (
                         <s.Text>Không có sản phẩm phù hợp...</s.Text>
                      )}

@@ -161,13 +161,13 @@ const LightBox: React.FC<PropsLightBox> = ({
                </s.Option>
             )}
             {isFullScreen ? (
-               <s.Option onClick={() => handleExtFullScreen()}>
+               <s.OptionFullScreen onClick={() => handleExtFullScreen()}>
                   <s.CompressIcon />
-               </s.Option>
+               </s.OptionFullScreen>
             ) : (
-               <s.Option onClick={() => handleFullScreen()}>
+               <s.OptionFullScreen onClick={() => handleFullScreen()}>
                   <s.ExpandIcon />
-               </s.Option>
+               </s.OptionFullScreen>
             )}
             <s.OptionThumnails onClick={() => handleOpenThumnails()}>
                <s.ThIcon />

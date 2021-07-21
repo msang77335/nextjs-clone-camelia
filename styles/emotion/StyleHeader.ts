@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 import Container from "./StyleContainer";
-import { Phone, Envelope } from "@emotion-icons/fa-solid";
+import { Phone, Envelope, Search, Bars } from "@emotion-icons/fa-solid";
 import { Registered } from "@emotion-icons/fa-regular";
 
 export const HeaderContainer = styled(Container)`
    display: flex;
    justify-content: space-between;
    align-items: center;
-   @media (max-width: 520px) {
-      padding: 0 1rem;
+   @media (max-device-width: 520px) {
+      padding: 0.7rem 1.5rem;
    }
 `;
 
@@ -21,6 +21,18 @@ export const Link = styled.span`
    &:hover {
       color: rgb(214, 28, 31);
    }
+`;
+
+export const SearchIcon = styled(Search)`
+   width: 2rem;
+   height: 2rem;
+   color: #7b7979;
+`;
+
+export const BarsIcon = styled(Bars)`
+   width: 2rem;
+   height: 2rem;
+   color: #7b7979;
 `;
 
 export const RegisteredIcon = styled(Registered)`
@@ -50,8 +62,6 @@ export const PhoneIcon = styled(Phone)`
       color: #7b7979;
    }
 `;
-
-export const Icon = styled.span``;
 
 export const EmailLink = styled(Link)`
    margin-right: 1.5rem;
@@ -83,22 +93,14 @@ export const Btn = styled.button`
    display: none;
    border: none;
    background-color: transparent;
-   svg {
-      font-size: 2rem;
-      color: #7b7979;
-   }
+   padding: 0;
+   margin-right: 1rem;
    @media (max-width: 520px) {
       display: block;
    }
 `;
 
 export const Left = styled.div`
-   ${Icon} {
-      color: #000000;
-      font-size: 1.2rem;
-      margin-left: 0.5rem;
-      font-weight: 700;
-   }
    @media (max-width: 520px) {
       display: flex;
       ${Link} {

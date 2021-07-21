@@ -7,11 +7,17 @@ export const Submit = styled.button`
    border-radius: 3px;
    width: 3.8rem;
    height: 3.8rem;
+   padding: 0.5rem;
    display: flex;
    align-items: center;
    justify-content: center;
    transition: all 0.25s linear;
    margin-left: 0.5rem;
+   span {
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+   }
 `;
 
 export const SearchForm = styled.form`
@@ -44,6 +50,10 @@ export const ResultItem = styled.li`
    }
 `;
 
+export const Image = styled.div`
+   margin-right: 1rem;
+`;
+
 export const SeeMore = styled.div`
    padding: 1rem;
    text-align: center;
@@ -74,10 +84,6 @@ export const Input = styled.input`
    }
 `;
 
-export const Image = styled.div`
-   margin-right: 1rem;
-`;
-
 export const Info = styled.div`
    font-weight: 700;
 `;
@@ -86,10 +92,19 @@ export const Name = styled.p`
    margin-bottom: 1rem;
    text-transform: capitalize;
    color: #333333;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Price = styled.p`
    color: #d61c1f;
+   font-size: 1.2rem;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Box = styled.div`

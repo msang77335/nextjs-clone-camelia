@@ -18,10 +18,10 @@ export const Top = styled.div`
    display: flex;
    align-items: center;
    justify-content: space-between;
-   @media (max-width: 414px) {
+   /* @media (max-width: 414px) {
       flex-direction: column;
       align-items: flex-start;
-   }
+   } */
 `;
 
 export const Title = styled.p`
@@ -29,6 +29,9 @@ export const Title = styled.p`
    font-size: 3rem;
    color: #333333;
    text-transform: capitalize;
+   @media (max-device-width: 430px) {
+      font-size: 2.5rem;
+   }
 `;
 
 export const Line = styled.div`
@@ -36,6 +39,9 @@ export const Line = styled.div`
    width: 100%;
    height: 1px;
    background-color: #333333;
+   @media (max-device-width: 430px) {
+      margin-left: 1rem;
+   }
 `;
 
 export const List = styled.ul`

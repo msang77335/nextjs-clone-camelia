@@ -9,6 +9,10 @@ export const Color = styled.div``;
 
 export const ColorTitle = styled.p`
    font-weight: 700;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const ColorList = styled.ul`

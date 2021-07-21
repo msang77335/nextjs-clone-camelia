@@ -36,6 +36,7 @@ const SelectOptions: React.FC<Props> = ({
       );
       handleOptionChange(optionFind.key);
       setIsSelected(optionFind);
+      setIsOpen(false);
    };
    return (
       <OutsideClickHandler

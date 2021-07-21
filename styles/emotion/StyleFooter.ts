@@ -21,6 +21,10 @@ export const Title = styled.p`
    font-weight: 700;
    color: #c7572b;
    line-height: 3;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Link = styled.span`

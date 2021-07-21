@@ -42,6 +42,17 @@ export const SearchBox = styled.form`
    justify-content: center;
    align-items: center;
    margin-bottom: 5rem;
+   @media (max-width: 550px) {
+      flex-direction: column;
+   }
+`;
+
+export const FormGroup = styled.div`
+   display: flex;
+   align-items: center;
+   @media (max-width: 550px) {
+      margin-top: 1rem;
+   }
 `;
 
 export const Input = styled.input`
@@ -56,6 +67,15 @@ export const Input = styled.input`
    &::placeholder {
       font-family: "Futura", sans-serif;
    }
+   @media (max-width: 700px) {
+      width: 30rem;
+   }
+   @media (max-width: 600px) {
+      width: 25rem;
+   }
+   @media (max-width: 550px) {
+      width: 27rem;
+   }
 `;
 
 export const Submit = styled.button`
@@ -64,6 +84,9 @@ export const Submit = styled.button`
    background-color: #545457;
    border: none;
    border-radius: 3px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 `;
 
 export const List = styled.ul`

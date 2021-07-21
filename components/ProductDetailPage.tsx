@@ -49,10 +49,12 @@ const ProductDetailPage: React.FC<PropsProductDetail> = ({
                         changeSlide={handleChangeSlide}
                      />
                   </AnimatePresence>
-                  <ProductTabs
-                     video={productDetail.video}
-                     descOfProductList={productDetail.description}
-                  />
+                  <s.Tabs>
+                     <ProductTabs
+                        video={productDetail.video}
+                        descOfProductList={productDetail.description}
+                     />
+                  </s.Tabs>
                </s.Left>
                <s.Right>
                   <s.RightBox>
@@ -74,6 +76,12 @@ const ProductDetailPage: React.FC<PropsProductDetail> = ({
                         indexColor={indexColor}
                         handleChangeColor={handleChangeColor}
                      />
+                     <s.Tabs>
+                        <ProductTabs
+                           video={productDetail.video}
+                           descOfProductList={productDetail.description}
+                        />
+                     </s.Tabs>
                   </s.RightBox>
                </s.Right>
             </s.ProductsPageContainer>

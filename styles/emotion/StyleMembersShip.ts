@@ -17,13 +17,12 @@ export const Name = styled.h2`
 export const Des = styled.p`
    color: #000000;
    margin: 1.5rem 0;
+   line-height: 1.45;
 `;
 
 export const Title = styled.p`
    color: #000000;
    font-size: 2rem;
-   font-weight: 700;
-   text-transform: uppercase;
 `;
 
 export const ImageBox = styled.div`
@@ -48,6 +47,10 @@ export const Bottom = styled.div`
 
 export const Bold = styled.span`
    font-weight: 700;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const PrimaryColor = styled.span`

@@ -3,6 +3,10 @@ import styled from "@emotion/styled";
 export const CountTitle = styled.p`
    font-weight: 700;
    margin-right: 1.5rem;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const CountBox = styled.div`
@@ -20,6 +24,9 @@ export const CountInput = styled.input`
    height: 3rem;
    width: 10rem;
    background-color: transparent;
+   @media (max-device-width: 1024px) {
+      border-radius: 0;
+   }
 `;
 
 export const CountBtn = styled.button`

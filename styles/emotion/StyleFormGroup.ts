@@ -30,6 +30,7 @@ export const Input = styled.input`
    box-shadow: 0 0 0 1px #d9d9d9;
    transition: all 0.25s ease-out;
    width: 100%;
+   -webkit-appearance: none;
    ::placeholder {
       font-family: Arial, Helvetica, sans-serif;
    }

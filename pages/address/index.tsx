@@ -21,7 +21,7 @@ const Address: React.FC = () => {
          </Head>
          <s.AddressContentMain>
             <s.AddressContainer>
-               <s.Name>CỬA HÀNG</s.Name>
+               <s.Name>CỬA HÀNG</s.Name>
                <s.Top>
                   <s.Des>
                      Hãy ghé thăm cửa hàng của Camelia Brand để xem trực tiếp
@@ -56,8 +56,11 @@ const Address: React.FC = () => {
                         width={2048}
                         height={1327}
                         layout="responsive"
-                        quality={100}
                         alt="Chi nhánh 1"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://file.hstatic.net/1000365849/file/756765_48accdfde9d74f1f9a6577056735c791.jpg"
+                        }
                      />
                   </s.ImageBox>
                   <s.ImageBox>
@@ -66,8 +69,11 @@ const Address: React.FC = () => {
                         width={2048}
                         height={1372}
                         layout="responsive"
-                        quality={100}
                         alt="Chi nhánh 1"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://file.hstatic.net/1000365849/file/54645654654654_90bd324e36214555a2810b8a0300edde.jpg"
+                        }
                      />
                   </s.ImageBox>
                   <s.Des>
@@ -82,8 +88,11 @@ const Address: React.FC = () => {
                         width={1200}
                         height={1000}
                         layout="responsive"
-                        quality={100}
                         alt="Chi nhánh 2"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://file.hstatic.net/1000365849/file/xxxxxxx_5b912457b35049e090ad858c1bf57716.jpg"
+                        }
                      />
                   </s.ImageBox>
                   <s.ImageBox>
@@ -92,8 +101,11 @@ const Address: React.FC = () => {
                         width={1670}
                         height={1120}
                         layout="responsive"
-                        quality={100}
                         alt="Chi nhánh 2"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://file.hstatic.net/1000365849/file/cccccc_24307db91fa24e438a403876f5ff4400.jpg"
+                        }
                      />
                   </s.ImageBox>
                   <s.Des>
@@ -108,8 +120,11 @@ const Address: React.FC = () => {
                         width={1200}
                         height={1000}
                         layout="responsive"
-                        quality={100}
                         alt="Chi nhánh 3"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://file.hstatic.net/1000365849/file/aaaaaaaaa_86df97512f7b412eaaea0f0f4d478d8b.jpg"
+                        }
                      />
                   </s.ImageBox>
                   <s.ImageBox>
@@ -118,15 +133,18 @@ const Address: React.FC = () => {
                         width={2048}
                         height={1372}
                         layout="responsive"
-                        quality={100}
                         alt="Chi nhánh 3"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://file.hstatic.net/1000365849/file/ban_do_2_c71c2d5803654cf69132c03702ec5e1f.jpg"
+                        }
                      />
                   </s.ImageBox>
                </s.Center>
                <s.Bottom>
-                  Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc không
-                  hài lòng về sản phẩm/dịch vụ của Camelia Brand, hãy liên hệ
-                  với chúng tôi tại thecameliavn@gmail.com hoặc 0909140170.
+                  Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc không
+                  hài lòng về sản phẩm/dịch vụ của Camelia Brand, hãy liên hệ
+                  với chúng tôi tại thecameliavn@gmail.com hoặc 0909140170.
                </s.Bottom>
             </s.AddressContainer>
          </s.AddressContentMain>

@@ -5,6 +5,9 @@ import Container from "./StyleContainer";
 
 export const CartContainer = styled(Container)`
    padding: 4rem 3rem;
+   @media (max-width: 430px) {
+      padding: 3rem 1.5rem;
+   }
 `;
 
 export const TrashIcon = styled(TrashAlt)`
@@ -29,7 +32,7 @@ export const Thead = styled.thead`
 `;
 
 export const Tr = styled.tr`
-   @media (max-width: 746px) {
+   @media (max-width: 768px) {
       margin-bottom: 2rem;
       display: block;
       border-radius: 3px;
@@ -37,6 +40,9 @@ export const Tr = styled.tr`
       &:last-of-type {
          margin-bottom: 0;
       }
+   }
+   @media (max-device-width: 430px) {
+      box-shadow: 0px 0px 5px 1px rgb(0 0 0 0.1);
    }
 `;
 
@@ -53,6 +59,10 @@ export const Th = styled.th`
    &:last-of-type {
       text-align: center;
    }
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
    @media (max-width: 768px) {
       font-size: 1.4rem;
       &:first-of-type {
@@ -64,10 +74,15 @@ export const Th = styled.th`
 export const Td = styled.td`
    padding: 1.5rem;
    font-weight: 700;
+   border-radius: 3px;
    border-bottom: 1px solid #f0ebeb;
    vertical-align: middle;
    &:last-of-type {
       text-align: center;
+   }
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
    }
    @media (max-width: 768px) {
       display: flex;
@@ -130,6 +145,9 @@ export const ProductColor = styled.p`
    span {
       text-transform: capitalize;
    }
+   @media (max-width: 1024px) {
+      font-style: initial;
+   }
 `;
 
 export const ProductPrice = styled.p`
@@ -156,6 +174,10 @@ export const TotalPrice = styled.p`
    font-size: 1.9rem;
    margin-bottom: 1.5rem;
    color: #666666;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Price = styled.span`
@@ -175,6 +197,12 @@ export const BtnAction = styled.button`
    border: none;
    font-size: 1.2rem;
    transition: all 0.25s linear;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+      width: 17rem;
+      font-size: 1.3rem;
+   }
 `;
 
 export const BtnApply = styled(BtnAction)`

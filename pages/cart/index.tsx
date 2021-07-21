@@ -98,7 +98,7 @@ const Cart: React.FC = () => {
                               cập nhật
                            </s.BtnApply>
                            <s.BtnPay>
-                              <Link href="">
+                              <Link href="/checkouts">
                                  <a>thanh toán</a>
                               </Link>
                            </s.BtnPay>
@@ -126,7 +126,7 @@ const Cart: React.FC = () => {
                            </s.Text>
                            <s.Text>
                               Tiếp tục mua hàng
-                              <Link href="/collections/all">
+                              <Link href="/collections/all/1">
                                  <a> tại đây</a>
                               </Link>
                               .

@@ -49,6 +49,12 @@ export const OptionThumnails = styled(Option)`
    }
 `;
 
+export const OptionFullScreen = styled(Option)`
+   @media (max-device-width: 1024px) {
+      display: none;
+   }
+`;
+
 export const Arrow = styled.button`
    position: fixed;
    top: 50%;

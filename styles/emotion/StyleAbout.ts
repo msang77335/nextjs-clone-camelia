@@ -17,11 +17,16 @@ export const Name = styled.h2`
 export const Des = styled.p`
    color: #000000;
    margin: 1.5rem 0;
+   line-height: 1.45;
 `;
 
 export const Title = styled.h4`
    margin-bottom: 2rem;
    font-weight: 700;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const ImageBox = styled.h4`

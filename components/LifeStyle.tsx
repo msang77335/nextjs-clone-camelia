@@ -4,11 +4,11 @@ import * as s from "../styles/emotion/SlyleLifeStyle";
 const LifeStyle: React.FC = () => {
    return (
       <s.LifeStyleContainer>
-         <s.Title as="h2">Lối sống Minimalism</s.Title>
+         <s.Title as="h2">Lối sống Minimalism</s.Title>
          <s.Des>
-            Cùng với thiết kế đơn giản và chất liệu bền bỉ, sản phẩm từ Camelia
-            Brand đem đến cho người dùng nhiều tiện ích để khiến cuộc sống bạn
-            trở nên dễ dàng, tối ưu và gọn gàng hơn. Xem nhé…
+            Cùng với thiết kế đơn giản và chất liệu bềnh bỉ, sản phẩm từ Camelia
+            Brand đem đến cho người dùng nhiều tiện ích để khiến cuộc sống của
+            bạn trở nên dễ dàng, tối ưu và gọn gàng hơn.
          </s.Des>
          <s.Video>
             <s.Iframe

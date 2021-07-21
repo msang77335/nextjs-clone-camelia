@@ -24,11 +24,14 @@ const Membership: React.FC = () => {
                <s.Title as="h2">MEMBERSHIP</s.Title>
                <s.ImageBox>
                   <Image
-                     quality={100}
                      src="https://file.hstatic.net/1000365849/file/dadadad_b23f35981acb46d9b0aae8d94e6f665e.jpg"
                      width={2048}
                      height={1952}
                      alt="Ưu đãi"
+                     placeholder="blur"
+                     blurDataURL={
+                        "https://file.hstatic.net/1000365849/file/dadadad_b23f35981acb46d9b0aae8d94e6f665e.jpg"
+                     }
                   ></Image>
                </s.ImageBox>
                <s.Title as="h2">
@@ -46,7 +49,7 @@ const Membership: React.FC = () => {
                <s.Des>
                   Chương trình khách hàng thân thiết ra đời, với mục tiêu nâng
                   cao trải nghiệm khách hàng và
-                  <s.Bold>tri ân nhiều hơn</s.Bold>
+                  <s.Bold> tri ân nhiều hơn </s.Bold>
                   những khách hàng đã đồng hành cùng Camelia Brand từ những ngày
                   đầu tiên.
                </s.Des>
@@ -194,9 +197,9 @@ const Membership: React.FC = () => {
                         thật nhiều vì đã chọn chúng mình hôm nay &lt;3
                      </s.Title>
                      <s.Des>
-                        Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc
-                        không hài lòng về sản phẩm/dịch vụ của Camelia, hãy liên
-                        hệ với chúng tôi tại thecameliavn@gmail.com hoặc
+                        Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc
+                        không hài lòng về sản phẩm/dịch vụ của Camelia, hãy liên
+                        hệ với chúng tôi tại thecameliavn@gmail.com hoặc
                         0909140170.
                      </s.Des>
                   </s.Block>

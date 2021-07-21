@@ -17,6 +17,7 @@ export const Name = styled.h2`
 export const Des = styled.p`
    color: #000000;
    margin: 1.5rem 0;
+   line-height: 1.45;
 `;
 
 export const Link = styled.div`
@@ -44,6 +45,10 @@ export const Block = styled.div`
       font-size: 1.6rem;
       color: #000000;
       font-weight: 700;
+      @media (max-device-width: 1024px) {
+         font-family: "FuturaBold";
+         font-weight: 400;
+      }
    }
 `;
 

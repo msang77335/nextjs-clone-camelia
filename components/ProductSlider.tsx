@@ -79,8 +79,7 @@ const ProductSlider: React.FC<PropsSlider> = ({
             <s.DotImage key={i}>
                <Image
                   src={images[i]}
-                  width={100}
-                  height={100}
+                  layout="fill"
                   alt={color}
                   loading="eager"
                   placeholder="blur"

@@ -36,6 +36,8 @@ const CartItem: React.FC<PropsCartItem> = ({ product, handleChange }) => {
                            width={90}
                            height={90}
                            alt={product.productInfo.name}
+                           placeholder="blur"
+                           blurDataURL={product.productInfo.image}
                         />
                      </a>
                   </Link>

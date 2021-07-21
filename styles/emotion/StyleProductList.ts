@@ -4,6 +4,9 @@ export const List = styled.ul`
    display: flex;
    flex-wrap: wrap;
    margin-right: -3rem;
+   @media (max-width: 550px) {
+      margin-right: -1rem;
+   }
 `;
 
 export const Item = styled.li`
@@ -14,6 +17,7 @@ export const Item = styled.li`
       margin: 1rem 3rem 1rem 0;
    }
    @media (max-width: 550px) {
-      width: calc(50% - 3rem);
+      width: calc(50% - 1rem);
+      margin: 3rem 1rem 3rem 0;
    }
 `;

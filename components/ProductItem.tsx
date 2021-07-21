@@ -56,9 +56,12 @@ const ProductItem: React.FC<PropsProduct> = ({ product }) => {
                         {color.image.localeCompare("") != 0 && (
                            <Image
                               src={color.image}
-                              width={300}
-                              height={300}
+                              width={500}
+                              height={500}
                               alt={product.name}
+                              placeholder="blur"
+                              priority
+                              blurDataURL={color.image}
                            />
                         )}
                      </s.ImageBox>

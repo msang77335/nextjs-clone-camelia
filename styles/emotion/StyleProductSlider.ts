@@ -12,10 +12,16 @@ export const LightBox = styled.div`
 
 export const NextArrow = styled(ChevronRight)`
    right: 2rem;
+   @media (max-width: 430px) {
+      right: 0;
+   }
 `;
 
 export const PrevArrow = styled(ChevronLeft)`
    left: 2rem;
+   @media (max-width: 430px) {
+      left: 0;
+   }
 `;
 
 export const Track = styled.ul`
@@ -24,16 +30,13 @@ export const Track = styled.ul`
 `;
 
 export const DotImage = styled.button`
+   position: relative;
    width: 8.5rem;
    height: 8.5rem;
    margin: 0 1rem;
    background-color: transparent;
    border: 2px solid transparent;
    overflow: hidden;
-   img {
-      transform: scale(1.05);
-      transition: all 0.25s linear;
-   }
    @media (max-width: 1280px) {
       margin: 0 0.5rem;
    }
@@ -45,7 +48,7 @@ export const DotImage = styled.button`
       width: 5rem;
       height: 5rem;
    }
-   @media (max-width: 413px) {
+   @media (max-width: 430px) {
       width: 4rem;
       height: 4rem;
    }

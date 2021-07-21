@@ -121,10 +121,18 @@ export const Name = styled.p`
    margin-bottom: 0.7rem;
    text-transform: capitalize;
    color: #333333;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Price = styled.p`
    color: #d61c1f;
+   @media (max-device-width: 520px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Text = styled.p`

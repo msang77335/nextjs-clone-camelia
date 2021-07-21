@@ -1,6 +1,12 @@
 import styled from "@emotion/styled";
 import Container from "./StyleContainer";
-import { ChevronRight, ChevronLeft } from "@emotion-icons/fa-solid";
+import {
+   ChevronRight,
+   ChevronLeft,
+   ShoppingCart,
+   ChevronDown,
+   ChevronUp,
+} from "@emotion-icons/fa-solid";
 import { css } from "@emotion/react";
 
 type PropsBreadcrumb = { isActice?: boolean };
@@ -8,6 +14,24 @@ type PropsBreadcrumb = { isActice?: boolean };
 type PropsRadioLabel = { isBorder?: boolean };
 
 type PropsRadioItem = { isChose?: boolean };
+
+export const ShoppingCartIcon = styled(ShoppingCart)`
+   width: 2.5rem;
+   height: 2.5rem;
+   color: #338dbc;
+`;
+
+export const ChevronDownIcon = styled(ChevronDown)`
+   width: 1rem;
+   height: 1rem;
+   color: #338dbc;
+`;
+
+export const ChevronUpIcon = styled(ChevronUp)`
+   width: 1rem;
+   height: 1rem;
+   color: #338dbc;
+`;
 
 export const ChevronRightIcon = styled(ChevronRight)`
    width: 1rem;
@@ -30,6 +54,9 @@ export const CheckoutsContainer = styled(Container)`
    padding: 0;
    @media (max-width: 1024px) {
       flex-direction: column-reverse;
+   }
+   @media (max-width: 430px) {
+      padding: 0;
    }
 `;
 
@@ -330,20 +357,65 @@ export const RightCenter = styled.div`
    border-left: 1px solid #d2d2d2;
    @media (max-width: 1024px) {
       width: 100%;
-      padding: 3rem 10rem 2rem;
+      padding: 2rem 0rem 2rem;
       border-bottom: 1px solid #d2d2d2;
       border-top: 1px solid #d2d2d2;
    }
    @media (max-width: 680px) {
-      padding: 3rem 5rem 0;
+      padding: 2rem 0rem 0;
    }
    @media (max-width: 500px) {
-      padding: 3rem 2rem 0;
+      padding: 2rem 0rem 0;
+   }
+   @media (max-width: 430px) {
+      padding: 2rem 0 0;
    }
 `;
 
+export const ToggleProducts = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 1px solid #e1e1e1;
+   padding: 2rem 0;
+   @media (max-width: 1024px) {
+      padding: 0 10rem 2rem;
+   }
+   @media (max-width: 680px) {
+      padding: 0 5rem 2rem;
+   }
+   @media (max-width: 500px) {
+      padding: 0 2rem 2rem;
+   }
+`;
+
+export const ToggleProductsLeft = styled.div`
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   p {
+      color: #338dbc;
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+   }
+`;
+
+export const ToggleProductsRight = styled.div``;
+
 export const ProductList = styled.ul`
-   padding-bottom: 1rem;
+   padding-top: 1.5rem;
+   @media (max-width: 1024px) {
+      padding: 2.5rem 10rem 1rem;
+   }
+   @media (max-width: 680px) {
+      padding: 2.5rem 5rem 1rem;
+   }
+   @media (max-width: 500px) {
+      padding: 2.5rem 2rem 1rem;
+   }
+   @media (max-width: 430px) {
+      padding: 2.5rem 2rem 1rem;
+   }
 `;
 
 export const ProductItem = styled.li`
@@ -428,6 +500,18 @@ export const Fee = styled.div`
    color: #717171;
    border-top: 1px solid #e1e1e1;
    border-bottom: 1px solid #e1e1e1;
+   @media (max-width: 1024px) {
+      padding: 0 10rem;
+   }
+   @media (max-width: 680px) {
+      padding: 0 5rem;
+   }
+   @media (max-width: 500px) {
+      padding: 0 2rem;
+   }
+   @media (max-width: 430px) {
+      padding: 2rem 2rem;
+   }
 `;
 
 export const FeeRow = styled.div`
@@ -442,6 +526,19 @@ export const Total = styled.div`
    align-items: center;
    justify-content: space-between;
    margin: 2.5rem 0;
+   @media (max-width: 1024px) {
+      padding: 0 10rem;
+   }
+   @media (max-width: 680px) {
+      padding: 0 5rem;
+   }
+   @media (max-width: 500px) {
+      padding: 0 2rem;
+   }
+   @media (max-width: 430px) {
+      padding: 2rem 2rem;
+      margin: 0;
+   }
 `;
 
 export const TotalTitle = styled.p`

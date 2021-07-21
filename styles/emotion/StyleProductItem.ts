@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+
 import { css } from "@emotion/react";
 
 type DotProps = {
@@ -11,8 +12,8 @@ type DotColorProps = {
 };
 
 export const DotColor = styled.button`
-   width: 2.5rem;
-   height: 2.5rem;
+   width: 2.7rem;
+   height: 2.7rem;
    margin: 0.3rem;
    border-radius: 50%;
    display: inline-block;
@@ -24,19 +25,13 @@ export const DotColor = styled.button`
    display: ${(props: DotColorProps) => (props.disable ? "none" : null)};
    @media (max-width: 1024px) {
       margin: 0.15rem;
-      width: 2.3rem;
-      height: 2.3rem;
-   }
-   @media (max-width: 768px) {
-      width: 2rem;
-      height: 2rem;
-      border: 1.5px solid rgb(237, 237, 237);
    }
 `;
 
 export const Track = styled.ul`
    display: flex;
    justify-content: center;
+   flex-wrap: wrap;
 `;
 
 export const Dot = styled.li`
@@ -84,9 +79,14 @@ export const Content = styled.div`
 export const Price = styled.p`
    font-size: 1.3rem;
    font-weight: 700;
+   color: #000;
    text-align: center;
    @media (max-width: 768px) {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+   }
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
    }
 `;
 

@@ -1,6 +1,12 @@
 @font-face {
    font-family: "Futura";
-   src: url(../../font/SFUFuturaRegular.TTF);
+   src: url(../../font/SVN-Futura\ Regular.otf);
+   /* src: url(../../font/SFUFuturaRegular.TTF); */
+}
+@font-face {
+   font-family: "FuturaBold";
+   src: url(../../font/SFUFuturaHeavy.TTF);
+   /* src: url(../../font/SFUFuturaRegular.TTF); */
 }
 * {
    box-sizing: border-box;

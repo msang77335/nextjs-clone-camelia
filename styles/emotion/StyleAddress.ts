@@ -17,11 +17,20 @@ export const Name = styled.h2`
 export const Des = styled.p`
    color: #000000;
    margin: 1.5rem 0;
+   line-height: 1.45;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Title = styled.h4`
    color: #000000;
-   font-size: 1.6rem;
+   font-size: 1.7rem;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const ImageBox = styled.div`
@@ -44,6 +53,10 @@ export const Item = styled.li`
       width: 1em;
       margin-left: -1em;
    }
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const Top = styled.div`
@@ -62,10 +75,15 @@ export const Center = styled.div`
 
 export const Bottom = styled.div`
    padding: 3rem 0 5rem;
+   line-height: 1.4;
 `;
 
 export const Bold = styled.div`
    font-weight: 700;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+   }
 `;
 
 export const PrimaryColor = styled.div`

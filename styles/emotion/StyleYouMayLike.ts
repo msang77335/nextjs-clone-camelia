@@ -28,19 +28,17 @@ export const Title = styled.h2`
 
 export const List = styled.ul`
    display: flex;
-   margin-right: -1.5rem;
+   flex-wrap: wrap;
+   overflow: hidden;
 `;
 
 export const Item = styled.li`
-   width: calc(20% - 1.5rem);
-   margin-right: 1.5rem;
-   @media (max-width: 1160px) {
-      width: calc(25% - 1.5rem);
-   }
-   @media (max-width: 860px) {
-      width: calc(33.33% - 1.5rem);
-   }
+   width: calc(20% - 1rem);
+   margin-right: 1rem;
    @media (max-width: 768px) {
-      width: calc(50% - 1.5rem);
+      width: calc(33.33% - 1rem);
+   }
+   @media (max-width: 550px) {
+      width: calc(50% - 1rem);
    }
 `;

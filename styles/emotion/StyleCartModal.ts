@@ -35,7 +35,10 @@ export const Title = styled.span`
    text-transform: uppercase;
    font-weight: 700;
    color: #d61c1f;
-   font-size: 1.6rem;
+   font-size: 1.7rem;
+   @media (max-device-width: 1024px) {
+      font-weight: 500;
+   }
 `;
 
 export const Text = styled.p`
@@ -112,6 +115,11 @@ export const BtnAction = styled.button`
       padding: 0.9rem;
       color: #ffffff;
    }
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+      font-size: 1.1rem;
+   }
 `;
 
 export const BtnEdit = styled(BtnAction)`
@@ -141,6 +149,11 @@ export const Price = styled.p`
    font-size: 1.6rem;
    font-weight: 700;
    color: #666666;
+   @media (max-device-width: 1024px) {
+      font-family: "FuturaBold";
+      font-weight: 400;
+      font-size: 1.5rem;
+   }
 `;
 
 export const PriceValue = styled.span`

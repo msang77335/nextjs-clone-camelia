@@ -5,6 +5,7 @@ import Link from "next/link";
 import useInput from "../hooks/UseInput";
 import * as s from "../styles/emotion/StyleSideBarSearch";
 import SideBarSearchResultItem from "./SideBarSearchResultItem";
+import { truncate } from "fs";
 
 interface Props {
    closeSearch?: Function;
@@ -14,6 +15,7 @@ interface Props {
 const SideBarSearch: React.FC<Props> = ({ closeSearch, status }) => {
    const [value, onChange, error, setError, resetValue] = useInput("");
    const [resultList, setResultList] = useState([]);
+   const [isFetching, setIsFetching] = useState(true);
    const router = useRouter();
    const handleClickResutlItem = () => {
       resetValue();
@@ -25,9 +27,11 @@ const SideBarSearch: React.FC<Props> = ({ closeSearch, status }) => {
          const responseJSON = await response.json();
          const { products } = responseJSON;
          setResultList(products);
+         setIsFetching(false);
       }
       if (value) {
          fetchProducts(value);
+         setIsFetching(true);
       } else {
          setResultList([]);
       }
@@ -98,6 +102,8 @@ const SideBarSearch: React.FC<Props> = ({ closeSearch, status }) => {
                                     </s.SeeMore>
                                  )}
                               </s.ResultList>
+                           ) : isFetching ? (
+                              <s.Text>Đang tìm kiếm...</s.Text>
                            ) : (
                               <s.Text>Không có sản phẩm phù hợp...</s.Text>
                            )}
