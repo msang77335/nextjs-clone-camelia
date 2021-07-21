@@ -15,7 +15,7 @@ const Exchange: React.FC = () => {
             <title>Camelia Barnd - Chính sách đổi trả</title>
             <meta
                name="viewport"
-               content="initial-scale=1.0, width=device-width"
+               content="initial-scale=1.0, width=device-width, maximum-scale=1"
             />
          </Head>
          <s.ExchangeContentMain>

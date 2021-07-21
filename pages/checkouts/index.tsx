@@ -210,7 +210,7 @@ const Checkouts: React.FC & { Layout: React.FC } = () => {
             <title>Thanh toán hóa đơn - Camelia Brand</title>
             <meta
                name="viewport"
-               content="initial-scale=1.0, width=device-width"
+               content="initial-scale=1.0, width=device-width, maximum-scale=1"
             />
          </Head>{" "}
          <s.CheckoutsContainer>

@@ -15,7 +15,7 @@ const Delivery: React.FC = () => {
             <title>Camelia Barnd - Phương thức giao hàng</title>
             <meta
                name="viewport"
-               content="initial-scale=1.0, width=device-width"
+               content="initial-scale=1.0, width=device-width, maximum-scale=1"
             />
          </Head>
          <s.DeliveryContentMain>

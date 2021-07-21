@@ -42,7 +42,7 @@ const Cart: React.FC = () => {
             <title>Giỏ hàng của bạn - Camelia Brand</title>
             <meta
                name="viewport"
-               content="initial-scale=1.0, width=device-width"
+               content="initial-scale=1.0, width=device-width, maximum-scale=1"
             />
          </Head>
          <s.CartContainer>

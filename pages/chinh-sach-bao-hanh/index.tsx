@@ -15,7 +15,7 @@ const Guarantee: React.FC = () => {
             <title>Camelia Barnd - Chính sách bảo hành</title>
             <meta
                name="viewport"
-               content="initial-scale=1.0, width=device-width"
+               content="initial-scale=1.0, width=device-width, maximum-scale=1"
             />
          </Head>
          <s.GuaranteeContentMain>
