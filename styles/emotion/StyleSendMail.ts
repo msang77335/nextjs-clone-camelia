@@ -33,7 +33,6 @@ export const Submit = styled.button`
    border: none;
    border-radius: 3px;
    background-color: #545457;
-   color: #ffffff;
    transition: all 0.25s linear;
    &:hover {
       background-color: #d61c1f;
