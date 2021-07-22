@@ -1,11 +1,16 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import { Phone, Envelope } from "@emotion-icons/fa-solid";
+import { Phone, Envelope, Times } from "@emotion-icons/fa-solid";
 import { Registered } from "@emotion-icons/fa-regular";
 
 type SideBarProps = {
    isOpen?: Boolean;
 };
+
+export const TimesIcon = styled(Times)`
+   width: 1.7rem;
+   height: 1.7rem;
+`;
 
 export const RegisteredIcon = styled(Registered)`
    color: #000000;

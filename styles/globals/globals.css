@@ -8,6 +8,7 @@
    src: url(../../font/SFUFuturaHeavy.TTF);
    /* src: url(../../font/SFUFuturaRegular.TTF); */
 }
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 * {
    box-sizing: border-box;
 }

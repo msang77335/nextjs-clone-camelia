@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import * as s from "../styles/emotion/StyleSideBarCategories";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MenuSideBar from "./MenuSideBar";
 
 interface Props {
@@ -117,7 +115,7 @@ const SideBarCategory: React.FC<Props> = ({ closeCategory, status }) => {
             </s.Bottom>
          </s.Content>
          <s.BtnClose onClick={() => closeCategory()}>
-            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+            <s.TimesIcon />
          </s.BtnClose>
          <s.BackGroud onClick={() => closeCategory()} />
       </s.SideBar>

@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import { PaperPlane } from "@emotion-icons/fa-solid";
+
+export const PaperPlaneIcon = styled(PaperPlane)``;
 
 export const Box = styled.div`
    display: flex;
