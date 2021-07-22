@@ -9,9 +9,9 @@ const ProductTabVideo: React.FC<PropsVideo> = ({ src }) => {
    return (
       <s.Video>
          <s.Iframe
-            width="750"
+            width="720"
             height="405"
-            src={src}
+            src={`${src}?rel=0&autoplay=0`}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

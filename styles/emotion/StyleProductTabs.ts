@@ -80,6 +80,10 @@ export const Video = styled.div`
       margin-bottom: 2rem;
       padding-bottom: 56.25%;
    }
+   @media (max-width: 430px) {
+      margin-bottom: 6rem;
+      padding-bottom: 56.25%;
+   }
 `;
 
 export const Iframe = styled.iframe`
