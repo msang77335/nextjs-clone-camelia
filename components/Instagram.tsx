@@ -6,8 +6,8 @@ const Instagram: React.FC = () => {
    return (
       <s.InstagramContainer>
          <s.Title as="h2">Instagram</s.Title>
-         <Link href="/">
-            <a>
+         <Link href="https://www.instagram.com">
+            <a target="_blank">
                <s.List>
                   <s.Item>
                      <Image

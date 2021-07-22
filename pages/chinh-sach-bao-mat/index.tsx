@@ -23,9 +23,9 @@ const Security: React.FC = () => {
                <s.Name>CHÍNH SÁCH BẢO MẬT</s.Name>
                <s.Top>
                   <s.Des>
-                     Camelia Brand tuyệt đối bảo vệ thông tin danh tính của
-                     khách hàng và hoàn toàn chấp hành Nghị định Chính phủ về
-                     Bảo mật 52/2013/NĐ-CP.
+                     Camelia Brand tuyệt đối bảo vệ thông tin danh tính của
+                     khách hàng và hoàn toàn chấp hành Nghị định Chính phủ về
+                     bảo mật 52/2013/NĐ-CP.
                   </s.Des>
                </s.Top>
                <s.Center>
@@ -84,9 +84,9 @@ const Security: React.FC = () => {
                         <s.Item>Xử lý đơn đặt hàng </s.Item>
                      </s.List>
                      <s.Des>
-                        Khi quý khách đăng ký nhận thông tin trên trang web
+                        Khi quý khách đăng ký nhận thông tin trên trang web
                         Camelia.vn chúng tôi cũng sẽ sử dụng email của quý khách
-                        để gửi thông tin mới nhất về các chương trình, sản phẩm.
+                        để gửi thông tin mới nhất về các chương trình, sản phẩm.
                         Quý khách có thể hủy nhận các thông tin đó bất cứ lúc
                         nào bằng cách sử dụng chức năng hủy đăng ký trong các
                         thông báo.
@@ -133,16 +133,16 @@ const Security: React.FC = () => {
                      </s.Title>
                      <s.Des>
                         Camelia Brand có quyền thay đổi và chỉnh sửa Quy định
-                        bảo mật. Bất kỳ thay đổi nào về chính sách này đều được
-                        công bố trên trang chủ website của chúng tôi.
+                        bảo mật. Bất kỳ thay đổi nào về chính sách này đều được
+                        công bố trên trang chủ website của chúng tôi.
                      </s.Des>
                   </s.Block>
                </s.Center>
                <s.Bottom>
                   <s.Des>
-                     Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc không
-                     hài lòng về sản phẩm/dịch vụ của Camelia, hãy liên hệ với
-                     chúng tôi tại thecameliavn@gmail.com hoặc 0909140170.
+                     Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc không
+                     hài lòng về sản phẩm/dịch vụ của Camelia, hãy liên hệ với
+                     chúng tôi tại thecameliavn@gmail.com hoặc 0909140170.
                   </s.Des>
                </s.Bottom>
             </s.SecurityContainer>

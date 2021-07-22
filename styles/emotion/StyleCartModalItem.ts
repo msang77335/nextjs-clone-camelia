@@ -6,6 +6,7 @@ export const Item = styled.div`
    justify-content: space-between;
    font-size: 1.2rem;
    border-bottom: 1px solid #f0ebeb;
+   padding: 0.5rem 0;
 `;
 
 export const Left = styled.div`
@@ -25,7 +26,7 @@ export const InfoList = styled.ul`
 `;
 
 export const InfoItem = styled.li`
-   margin: 1rem 0;
+   margin: 0.7rem 0;
 `;
 
 export const Name = styled.p`

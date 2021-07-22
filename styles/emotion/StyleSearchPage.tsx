@@ -9,12 +9,11 @@ export const SearchIcon = styled(Search)`
    height: 2rem;
 `;
 
-export const SearchPageContentMain = styled(ContentMain)``;
-
-export const SearchPageContainer = styled(Container)`
-   padding-top: 2rem;
-   padding-bottom: 2rem;
+export const SearchPageContentMain = styled(ContentMain)`
+   padding: 2rem 0;
 `;
+
+export const SearchPageContainer = styled(Container)``;
 
 export const Top = styled.div`
    text-align: center;

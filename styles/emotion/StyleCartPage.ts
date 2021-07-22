@@ -10,6 +10,13 @@ export const CartContainer = styled(Container)`
    }
 `;
 
+export const Name = styled.h2`
+   text-transform: uppercase;
+   font-size: 2.3rem;
+   color: #333333;
+   margin-bottom: 2rem;
+`;
+
 export const TrashIcon = styled(TrashAlt)`
    cursor: pointer;
    width: 3rem;

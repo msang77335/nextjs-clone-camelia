@@ -21,10 +21,10 @@ const Payment: React.FC = () => {
          </Head>
          <s.PaymentContentMain>
             <s.PaymentContainer>
-               <s.Name>PHƯƠNG THỨC THANH TOÁN</s.Name>
+               <s.Name>PHƯƠNG THỨC THANH TOÁN</s.Name>
                <s.Top>
                   <s.Des>
-                     Các bạn có thể lựa chọn 2 hình thức thanh toán sau khi mua
+                     Các bạn có thể lựa chọn 2 hình thức thanh toán sau khi mua
                      sắm trực tuyến tại camelia.vn
                   </s.Des>
                </s.Top>
@@ -34,12 +34,12 @@ const Payment: React.FC = () => {
                         1. Thanh toán tiền mặt khi nhận hàng (COD)
                      </s.Title>
                      <s.Des>
-                        Bước 1: Các bạn mua hàng tại website camelia.vn và chọn
+                        Bước 1: Các bạn mua hàng tại website camelia.vn và chọn
                         &apos;Thanh toán&apos;
                      </s.Des>
                      <s.Des>
-                        Bước 2: Chọn ô &apos;Thanh toán tiền mặt khi nhận
-                        hàng&apos; sau đó chọn &apos;Hoàn tất&apos;
+                        Bước 2: Chọn ô &apos;Thanh toán tiền mặt khi nhận
+                        hàng&apos; sau đó chọn &apos;Hoàn tất&apos;
                      </s.Des>
                      <s.Image>
                         <Image
@@ -52,23 +52,23 @@ const Payment: React.FC = () => {
                         />
                      </s.Image>
                      <s.Des>
-                        Đã hoàn tất! Nhân viên giao hàng sẽ nhận tiền mặt của
-                        bạn sau khi giao hàng.
+                        Đã hoàn tất! Nhân viên giao hàng sẽ nhận tiền mặt của
+                        bạn sau khi giao hàng.
                      </s.Des>
                      <s.Des>
-                        Chúng tôi sẽ liên lạc cho bạn trước khi sản phẩm đến
+                        Chúng tôi sẽ liên lạc cho bạn trước khi sản phẩm đến
                         nơi.
                      </s.Des>
                   </s.Block>
                   <s.Block>
                      <s.Title>2. Chuyển khoản ngân hàng</s.Title>
                      <s.Des>
-                        Bước 1: Các bạn mua hàng tại website camelia.vn và chọn
+                        Bước 1: Các bạn mua hàng tại website camelia.vn và chọn
                         &apos;Thanh toán&apos;
                      </s.Des>
                      <s.Des>
-                        Bước 2: Chọn ô &apos;Chuyển khoản ngân hàng&apos; và làm
-                        theo hướng dẫn cụ thể phía dưới
+                        Bước 2: Chọn ô &apos;Chuyển khoảng ngân hàng&apos; và
+                        làm theo hướng dẫn cụ thể phía dưới
                      </s.Des>
                      <s.Image>
                         <Image
@@ -81,20 +81,20 @@ const Payment: React.FC = () => {
                         />
                      </s.Image>
                      <s.Des>
-                        Đã hoàn tất! Camelia sẽ giao hàng cho bạn ngay khi chúng
-                        tôi vừa nhận được tiền.
+                        Đã hoàn tất! Camelia sẽ giao hàng cho bạn ngay khi chúng
+                        tôi vừa nhận được tiền.
                      </s.Des>
                      <s.Des>
-                        Chúng tôi sẽ liên lạc cho bạn trước khi sản phẩm đến
+                        Chúng tôi sẽ liên lạc cho bạn trước khi sản phẩm đến
                         nơi.
                      </s.Des>
                   </s.Block>
                </s.Center>
                <s.Bottom>
                   <s.Des>
-                     Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc không
-                     hài lòng về sản phẩm/dịch vụ của Camelia, hãy liên hệ với
-                     chúng tôi tại thecameliavn@gmail.com hoặc 0909140170.
+                     Nếu quý khách có bất kỳ yêu cầu hay thắc mắc nào hoặc không
+                     hài lòng về sản phẩm/dịch vụ của Camelia, hãy liên hệ với
+                     chúng tôi tại thecameliavn@gmail.com hoặc 0909140170.
                   </s.Des>
                </s.Bottom>
             </s.PaymentContainer>

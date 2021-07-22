@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                         </Link>
                      </s.Item>
                      <s.Item>
-                        <Link href="/">
+                        <Link href="tel:19001052">
                            <a>
                               <s.Link>
                                  <s.PhoneIcon />
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                         </Link>
                      </s.Item>
                      <s.Item>
-                        <Link href="/">
+                        <Link href="mailto:thecameliavn@gmail.com">
                            <a>
                               <s.Link>
                                  <s.EnvelopeIcon />
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                   <p>Cập nhật những sản phẩm mới nhất từ Camelia Brand nhé!</p>
                   <s.Media>
                      <s.MediaItem>
-                        <Link href="/">
+                        <Link href="https://www.facebook.com/camelia.vn">
                            <a>
                               <s.FaceBookMedia>
                                  <FontAwesomeIcon icon={faFacebookF} />
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
                         </Link>
                      </s.MediaItem>
                      <s.MediaItem>
-                        <Link href="/">
+                        <Link href="https://www.instagram.com/camelia.vn">
                            <a>
                               <s.InstagramMedia>
                                  <FontAwesomeIcon icon={faInstagram} />
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                         </Link>
                      </s.MediaItem>
                      <s.MediaItem>
-                        <Link href="/">
+                        <Link href="https://www.youtube.com/channel/UCwBs_NxpSwjgB7X-VCQ2myw?view_as=subscriber">
                            <a>
                               <s.YouTuBeMedia>
                                  <FontAwesomeIcon icon={faYoutube} />

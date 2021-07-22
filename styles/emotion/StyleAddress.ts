@@ -2,11 +2,11 @@ import styled from "@emotion/styled";
 import Container from "./StyleContainer";
 import ContentMain from "./StyleContentMain";
 
-export const AddressContentMain = styled(ContentMain)``;
-
-export const AddressContainer = styled(Container)`
+export const AddressContentMain = styled(ContentMain)`
    padding-top: 2rem;
 `;
+
+export const AddressContainer = styled(Container)``;
 
 export const Name = styled.h2`
    text-transform: uppercase;

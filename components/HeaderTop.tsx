@@ -45,7 +45,7 @@ const HeaderTop: React.FC<Props> = ({ openSearch, openCategory }) => {
                      </s.PhoneLink>
                   </a>
                </Link>
-               <Link href="/">
+               <Link href="callto:19001052">
                   <a>
                      <s.Link>
                         <s.PhoneIcon />
@@ -53,7 +53,7 @@ const HeaderTop: React.FC<Props> = ({ openSearch, openCategory }) => {
                      </s.Link>
                   </a>
                </Link>
-               <Link href="/">
+               <Link href="mailto:thecameliavn@gmail.com">
                   <a>
                      <s.EmailLink>
                         <s.EnvelopeIcon />

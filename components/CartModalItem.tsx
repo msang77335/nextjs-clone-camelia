@@ -44,9 +44,6 @@ const CartModalItem: React.FC<PropsProduct> = ({ product }) => {
                   </Link>
                </s.InfoItem>
                <s.InfoItem>
-                  <s.Color>Phiên bản: {product.colorInfo.name}</s.Color>
-               </s.InfoItem>
-               <s.InfoItem>
                   <s.Quantity>Số lượng: {product.quantity}</s.Quantity>
                </s.InfoItem>
                <s.InfoItem>

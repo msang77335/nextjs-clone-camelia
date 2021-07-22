@@ -55,6 +55,7 @@ const Cart: React.FC = () => {
                      exit={{ opacity: 0 }}
                      transition={{ duration: 0.55 }}
                   >
+                     <s.Name>GIỎ HÀNG</s.Name>
                      <s.Table>
                         <s.Thead>
                            <s.Tr>

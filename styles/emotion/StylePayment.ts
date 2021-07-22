@@ -2,11 +2,11 @@ import styled from "@emotion/styled";
 import Container from "./StyleContainer";
 import ContentMain from "./StyleContentMain";
 
-export const PaymentContentMain = styled(ContentMain)``;
-
-export const PaymentContainer = styled(Container)`
+export const PaymentContentMain = styled(ContentMain)`
    padding-top: 2rem;
 `;
+
+export const PaymentContainer = styled(Container)``;
 
 export const Name = styled.h2`
    text-transform: uppercase;
@@ -17,6 +17,7 @@ export const Name = styled.h2`
 export const Des = styled.p`
    color: #000000;
    margin: 1.5rem 0;
+   line-height: 1.45;
 `;
 
 export const Title = styled.h4`
@@ -33,6 +34,10 @@ export const Block = styled.div`
    ${Title} {
       font-size: 1.6rem;
       text-transform: initial;
+      @media (max-device-width: 1024px) {
+         font-family: "FuturaBold";
+         font-weight: 400;
+      }
    }
 `;
 

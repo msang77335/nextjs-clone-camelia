@@ -5,7 +5,7 @@ import * as s from "../styles/emotion/StyleMessenger";
 
 const Messenger: React.FC = () => {
    return (
-      <s.Box href="/">
+      <s.Box href="https://m.me/camelia.vn" target="_blank">
          <Image src={MessIcon} width={40} height={40} alt="Messenger" />
       </s.Box>
    );
