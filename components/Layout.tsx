@@ -1,4 +1,5 @@
 import React, { ReactChild, ReactChildren, useEffect, useState } from "react";
+import Head from "next/head";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 const Banner = dynamic(() => import("./Banner"));
@@ -35,6 +36,9 @@ const Layout: React.FC<Props> = ({ children }) => {
          animate={{ opacity: 1 }}
          transition={{ duration: 0.65 }}
       >
+         <Head>
+            <link rel="shortcut icon" href="/logo.webp" />
+         </Head>
          <HeaderTop openSearch={toggleSearch} openCategory={toggleCategory} />
          <HeaderBottom />
          <Banner />
