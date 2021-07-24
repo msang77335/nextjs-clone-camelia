@@ -71,6 +71,10 @@ const ImageSlider: React.FC = () => {
                   alt=""
                   width={1860}
                   height={744}
+                  placeholder="blur"
+                  blurDataURL={
+                     "http://theme.hstatic.net/1000365849/1000614631/14/ms_banner_img2.jpg?v=81"
+                  }
                />
             </div>
             <div>
@@ -79,6 +83,10 @@ const ImageSlider: React.FC = () => {
                   alt=""
                   width={1860}
                   height={744}
+                  placeholder="blur"
+                  blurDataURL={
+                     "http://theme.hstatic.net/1000365849/1000614631/14/ms_banner_img3.jpg?v=81"
+                  }
                />
             </div>
             <div>
@@ -87,6 +95,10 @@ const ImageSlider: React.FC = () => {
                   alt=""
                   width={1860}
                   height={744}
+                  placeholder="blur"
+                  blurDataURL={
+                     "http://theme.hstatic.net/1000365849/1000614631/14/ms_banner_img4.jpg?v=81"
+                  }
                />
             </div>
             <div>
@@ -95,6 +107,10 @@ const ImageSlider: React.FC = () => {
                   alt=""
                   width={1860}
                   height={744}
+                  placeholder="blur"
+                  blurDataURL={
+                     "http://theme.hstatic.net/1000365849/1000614631/14/ms_banner_img5.jpg?v=81"
+                  }
                />
             </div>
          </Slider>

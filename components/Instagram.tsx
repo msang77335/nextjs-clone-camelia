@@ -16,6 +16,10 @@ const Instagram: React.FC = () => {
                         height={300}
                         layout="responsive"
                         alt="instagram.com"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://theme.hstatic.net/1000365849/1000616074/14/img_instagram1.jpg?v=81"
+                        }
                      />
                   </s.Item>
                   <s.Item>
@@ -25,6 +29,10 @@ const Instagram: React.FC = () => {
                         height={300}
                         layout="responsive"
                         alt="instagram.com"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://theme.hstatic.net/1000365849/1000616074/14/img_instagram2.jpg?v=81"
+                        }
                      />
                   </s.Item>
                   <s.Item>
@@ -34,6 +42,10 @@ const Instagram: React.FC = () => {
                         height={300}
                         layout="responsive"
                         alt="instagram.com"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://theme.hstatic.net/1000365849/1000614631/14/img_instagram1.jpg?v=81"
+                        }
                      />
                   </s.Item>
                   <s.Item>
@@ -43,6 +55,10 @@ const Instagram: React.FC = () => {
                         height={300}
                         layout="responsive"
                         alt="instagram.com"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://theme.hstatic.net/1000365849/1000614631/14/img_instagram2.jpg?v=81"
+                        }
                      />
                   </s.Item>
                   <s.Item>
@@ -52,6 +68,10 @@ const Instagram: React.FC = () => {
                         height={300}
                         layout="responsive"
                         alt="instagram.com"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://theme.hstatic.net/1000365849/1000614631/14/img_instagram3.jpg?v=81"
+                        }
                      />
                   </s.Item>
                   <s.Item>
@@ -61,6 +81,10 @@ const Instagram: React.FC = () => {
                         height={300}
                         layout="responsive"
                         alt="instagram.com"
+                        placeholder="blur"
+                        blurDataURL={
+                           "https://theme.hstatic.net/1000365849/1000614631/14/img_instagram4.jpg?v=81"
+                        }
                      />
                   </s.Item>
                </s.List>

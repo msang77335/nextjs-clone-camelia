@@ -1,4 +1,3 @@
-import { Product } from "../../interface/CartInterface";
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
 
