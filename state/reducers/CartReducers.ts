@@ -10,7 +10,7 @@ export interface CartState {
 
 const initialState = {
    amount: 0,
-   products: [],
+   products: [] as Product[],
    totalPrice: 0,
 };
 
